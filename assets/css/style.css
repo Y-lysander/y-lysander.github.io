@@ -796,11 +796,12 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(30,22,14,.88);
-  display: grid;
+  display: none;
   place-items: center;
   z-index: 100;
   animation: fadeIn .25s;
 }
+.lightbox.open { display: grid; }
 
 .lightbox img {
   max-width: 88vw;

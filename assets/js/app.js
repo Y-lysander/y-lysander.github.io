@@ -328,7 +328,8 @@ function bindEvents() {
     const zoomEl = e.target.closest("[data-lightbox]");
     if (zoomEl) {
       $("#lightboxImg").src = zoomEl.dataset.lightbox;
-      $("#lightbox").hidden = false;
+      $("#lightboxImg").onload = () => $("#lightbox").classList.add("open");
+      $("#lightbox").classList.add("open");
     }
   });
 
@@ -353,7 +354,7 @@ function bindEvents() {
   });
 
   $("#lightbox").addEventListener("click", (e) => {
-    if (e.target.id === "lightbox" || e.target.id === "lightboxClose") $("#lightbox").hidden = true;
+    if (e.target.id === "lightbox" || e.target.id === "lightboxClose") $("#lightbox").classList.remove("open");
   });
 }
 
