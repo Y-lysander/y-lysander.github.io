@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.xiang = [
   {
-    id: "xiang-duojiaoyutou",
+    
     name: "剁椒鱼头",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-duojiaoyutou",
+    image: "assets/img/xiang-duojiaoyutou.jpg",
     desc: "红艳剁椒铺面，鱼肉鲜辣嫩滑，湘菜的门面担当。",
     time: "40 分钟",
     difficulty: "中等",
@@ -36,9 +37,10 @@ window.RECIPES.xiang = [
     tips: "剁椒足味、大火足汽，鱼肉鲜辣嫩滑。"
   },
   {
-    id: "xiang-nongjiax",
+    
     name: "农家小炒肉",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-nongjiax",
+    image: "assets/img/xiang-nongjiax.jpg",
     desc: "五花肉焦香，青椒微辣，最解馋的湘式家常菜。",
     time: "20 分钟",
     difficulty: "简单",
@@ -66,9 +68,10 @@ window.RECIPES.xiang = [
     tips: "肉要煸出焦香，辣椒干煸出虎皮才够味。"
   },
   {
-    id: "xiang-maoshihongshaorou",
+    
     name: "毛氏红烧肉",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-maoshihongshaorou",
+    image: "assets/img/xiang-maoshihongshaorou.jpg",
     desc: "红亮油润，肥而不腻，以色泽红润著称的湘味红烧肉。",
     time: "120 分钟",
     difficulty: "中等",
@@ -95,9 +98,10 @@ window.RECIPES.xiang = [
     tips: "糖色火候恰当，慢烧到酥而不腻才正宗。"
   },
   {
-    id: "xiang-dongan",
+    
     name: "东安子鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-dongan",
+    image: "assets/img/xiang-dongan.jpg",
     desc: "鸡肉酸辣鲜嫩，醋香醇厚，湘菜开胃派名菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -125,9 +129,10 @@ window.RECIPES.xiang = [
     tips: "酸辣清爽，鸡肉快速翻炒保嫩滑。"
   },
   {
-    id: "xiang-lawuhs",
+    
     name: "腊味合蒸",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-lawuhs",
+    image: "assets/img/xiang-lawuhs.jpg",
     desc: "腊肉腊肠腊鱼同蒸，腊香交融，湘味十足的下饭菜。",
     time: "50 分钟",
     difficulty: "简单",
@@ -154,9 +159,10 @@ window.RECIPES.xiang = [
     tips: "腊味叠摆同蒸，火候足让腊香相互渗透。"
   },
   {
-    id: "xiang-maluozi",
+    
     name: "麻辣子鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-maluozi",
+    image: "assets/img/xiang-maluozi.jpg",
     desc: "鸡丁干香，麻辣入味，湘味小炒的经典代表。",
     time: "30 分钟",
     difficulty: "中等",
@@ -184,9 +190,10 @@ window.RECIPES.xiang = [
     tips: "辣椒花椒先煸香，鸡丁小火回香才干辣入味。"
   },
   {
-    id: "xiang-ganlashou",
+    
     name: "干锅手撕包菜",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-ganlashou",
+    image: "assets/img/xiang-ganlashou.jpg",
     desc: "包菜爽脆，干香微辣，饭店点单率极高的素菜。",
     time: "20 分钟",
     difficulty: "简单",
@@ -214,9 +221,10 @@ window.RECIPES.xiang = [
     tips: "旺火爆炒保持爽脆，干香入味不水塌。"
   },
   {
-    id: "xiang-lajiaoji",
+    
     name: "辣椒炒肉",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-lajiaoji",
+    image: "assets/img/xiang-lajiaoji.jpg",
     desc: "螺丝椒鲜辣，肉片焦香，湖南人刻进骨子里的味道。",
     time: "20 分钟",
     difficulty: "简单",
@@ -244,9 +252,10 @@ window.RECIPES.xiang = [
     tips: "辣椒干煸出虎皮，肉与椒同炒才够香辣。"
   },
   {
-    id: "xiang-jiaoyufuyu",
+    
     name: "椒盐小河虾",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-jiaoyufuyu",
+    image: "assets/img/xiang-jiaoyufuyu.jpg",
     desc: "小河虾炸至酥脆，椒香咸鲜，下酒佐饭皆宜。",
     time: "20 分钟",
     difficulty: "简单",
@@ -272,9 +281,10 @@ window.RECIPES.xiang = [
     tips: "炸到外壳酥脆，椒盐趁热裹匀。"
   },
   {
-    id: "xiang-zhixian",
+    
     name: "豆豉蒸排骨",
-    image: "assets/img/placeholder.jpg",
+    id: "xiang-zhixian",
+    image: "assets/img/xiang-zhixian.jpg",
     desc: "排骨嫩滑，豉香鲜辣，湘味蒸菜的浓香代表。",
     time: "40 分钟",
     difficulty: "简单",

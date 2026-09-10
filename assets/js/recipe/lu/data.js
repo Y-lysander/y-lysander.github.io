@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.lu = [
   {
-    id: "lu-tangculiyu",
+    
     name: "糖醋鲤鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-tangculiyu",
+    image: "assets/img/lu-tangculiyu.jpg",
     desc: "金鳞酥脆，酸甜适口，鲁菜宴席的经典开席大菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -36,9 +37,10 @@ window.RECIPES.lu = [
     tips: "先定油温复炸提酥，糖醋汁要热油爆出酸香。"
   },
   {
-    id: "lu-jiuzhuan",
+    
     name: "九转大肠",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-jiuzhuan",
+    image: "assets/img/lu-jiuzhuan.jpg",
     desc: "肥肠软糯，咸甜酸辣香五味俱全，鲁菜名品。",
     time: "90 分钟",
     difficulty: "较难",
@@ -68,9 +70,10 @@ window.RECIPES.lu = [
     tips: "糖量要足，咸甜酸辣香五味平衡才有九转风味。"
   },
   {
-    id: "lu-congshaohaishen",
+    
     name: "葱烧海参",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-congshaohaishen",
+    image: "assets/img/lu-congshaohaishen.jpg",
     desc: "海参软糯弹润，葱香浓郁，胶东名贵宴客硬菜。",
     time: "60 分钟",
     difficulty: "较难",
@@ -98,9 +101,10 @@ window.RECIPES.lu = [
     tips: "葱油是灵魂，小火慢煨让海参充分吸味。"
   },
   {
-    id: "lu-guotadoufu",
+    
     name: "锅塌豆腐",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-guotadoufu",
+    image: "assets/img/lu-guotadoufu.jpg",
     desc: "外酥里嫩，汤汁鲜香，鲁菜锅塌技法的代表菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -129,9 +133,10 @@ window.RECIPES.lu = [
     tips: "小火慢塌出香，蛋香与豆香交融。"
   },
   {
-    id: "lu-youbaoshuangcui",
+    
     name: "油爆双脆",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-youbaoshuangcui",
+    image: "assets/img/lu-youbaoshuangcui.jpg",
     desc: "鸡胗与肚尖入口爽脆，旺火快炒，考验火候的爆款菜。",
     time: "25 分钟",
     difficulty: "较难",
@@ -159,9 +164,10 @@ window.RECIPES.lu = [
     tips: "全程旺火快抢，动作利落才保双脆爽口。"
   },
   {
-    id: "lu-sixiwanzi",
+    
     name: "四喜丸子",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-sixiwanzi",
+    image: "assets/img/lu-sixiwanzi.jpg",
     desc: "个大肉圆，软糯咸香，寓意福禄寿喜的宴席吉祥菜。",
     time: "90 分钟",
     difficulty: "中等",
@@ -190,9 +196,10 @@ window.RECIPES.lu = [
     tips: "搅打上劲肉才弹，小火久炖才软糯入味。"
   },
   {
-    id: "lu-baochaoyaohua",
+    
     name: "爆炒腰花",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-baochaoyaohua",
+    image: "assets/img/lu-baochaoyaohua.jpg",
     desc: "腰花脆嫩无膻，酱香浓郁，鲁菜经典下饭菜。",
     time: "30 分钟",
     difficulty: "中等",
@@ -222,9 +229,10 @@ window.RECIPES.lu = [
     tips: "去净腰臊是除腥关键，快炒收紧锁脆。"
   },
   {
-    id: "lu-tangculiji",
+    
     name: "糖醋里脊",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-tangculiji",
+    image: "assets/img/lu-tangculiji.jpg",
     desc: "色泽金黄，外酥里嫩，酸甜开胃的北方家庭硬菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -252,9 +260,10 @@ window.RECIPES.lu = [
     tips: "复炸定型保脆，糖醋汁温度要够才裹得住。"
   },
   {
-    id: "lu-dezhoupaji",
+    
     name: "德州扒鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-dezhoupaji",
+    image: "assets/img/lu-dezhoupaji.jpg",
     desc: "五香脱骨，肉烂形整，一抖即散的德州名鸡。",
     time: "150 分钟",
     difficulty: "较难",
@@ -282,9 +291,10 @@ window.RECIPES.lu = [
     tips: "定型要扎实，小火久扒才肉烂形整不散架。"
   },
   {
-    id: "lu-hongshaodaxia",
+    
     name: "红烧大虾",
-    image: "assets/img/placeholder.jpg",
+    id: "lu-hongshaodaxia",
+    image: "assets/img/lu-hongshaodaxia.jpg",
     desc: "虾肉弹嫩，酱香红亮，胶东海鲜家常硬菜。",
     time: "25 分钟",
     difficulty: "简单",

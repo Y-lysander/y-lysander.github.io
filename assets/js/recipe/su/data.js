@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.su = [
   {
-    id: "su-hongshaoshizitou",
+    
     name: "红烧狮子头",
-    image: "assets/img/placeholder.jpg",
+    id: "su-hongshaoshizitou",
+    image: "assets/img/su-hongshaoshizitou.jpg",
     desc: "肉圆硕大软糯，肥瘦相宜，淮扬功夫菜的看家名品。",
     time: "120 分钟",
     difficulty: "中等",
@@ -37,9 +38,10 @@ window.RECIPES.su = [
     tips: "搅打上劲成胶，小火久焖才软糯入味。"
   },
   {
-    id: "su-songshuguaiyu",
+    
     name: "松鼠桂鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "su-songshuguaiyu",
+    image: "assets/img/su-songshuguaiyu.jpg",
     desc: "形如松鼠，外酥里嫩，浇酸甜汁的苏帮宴席头菜。",
     time: "60 分钟",
     difficulty: "较难",
@@ -68,9 +70,10 @@ window.RECIPES.su = [
     tips: "花刀均匀、充分裹粉定型，炸出来才形似松鼠粒粒分明。"
   },
   {
-    id: "su-dazhuganshi",
+    
     name: "大煮干丝",
-    image: "assets/img/placeholder.jpg",
+    id: "su-dazhuganshi",
+    image: "assets/img/su-dazhuganshi.jpg",
     desc: "干丝细如发丝，汤鲜味醇，扬州早茶名点。",
     time: "40 分钟",
     difficulty: "中等",
@@ -97,9 +100,10 @@ window.RECIPES.su = [
     tips: "干丝细且汤鲜，绵软入味靠小火慢煮。"
   },
   {
-    id: "su-yanshuiya",
+    
     name: "盐水鸭",
-    image: "assets/img/placeholder.jpg",
+    id: "su-yanshuiya",
+    image: "assets/img/su-yanshuiya.jpg",
     desc: "咸香适度，皮白肉嫩，南京的一张风味名片。",
     time: "150 分钟",
     difficulty: "中等",
@@ -126,9 +130,10 @@ window.RECIPES.su = [
     tips: "先腌后浸，汤清鸭白，讲究咸鲜适度。"
   },
   {
-    id: "su-xiefendoufu",
+    
     name: "蟹粉豆腐",
-    image: "assets/img/placeholder.jpg",
+    id: "su-xiefendoufu",
+    image: "assets/img/su-xiefendoufu.jpg",
     desc: "豆腐嫩滑，蟹粉鲜香，淮扬席上的细腻佳肴。",
     time: "30 分钟",
     difficulty: "中等",
@@ -156,9 +161,10 @@ window.RECIPES.su = [
     tips: "豆腐轻焯防散，小火煲煮蟹粉鲜味渗入豆腐。"
   },
   {
-    id: "su-tangcupaigu",
+    
     name: "糖醋排骨",
-    image: "assets/img/placeholder.jpg",
+    id: "su-tangcupaigu",
+    image: "assets/img/su-tangcupaigu.jpg",
     desc: "色泽红亮，酸甜适口，江浙餐桌最受欢迎的家常菜。",
     time: "45 分钟",
     difficulty: "简单",
@@ -185,9 +191,10 @@ window.RECIPES.su = [
     tips: "先煮后收，糖醋最后放，酸甜开胃且色泽透亮。"
   },
   {
-    id: "su-jiaohuaji",
+    
     name: "叫花鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "su-jiaohuaji",
+    image: "assets/img/su-jiaohuaji.jpg",
     desc: "荷叶裹泥烤制，鸡肉酥烂脱骨，风味独特的名菜。",
     time: "180 分钟",
     difficulty: "较难",
@@ -214,9 +221,10 @@ window.RECIPES.su = [
     tips: "荷叶包紧传香，泥层厚实受热均匀肉才酥烂。"
   },
   {
-    id: "su-dongpojirou",
+    
     name: "东坡肘子",
-    image: "assets/img/placeholder.jpg",
+    id: "su-dongpojirou",
+    image: "assets/img/su-dongpojirou.jpg",
     desc: "肥而不腻，软糯酥香，以文豪苏轼命名的经典硬菜。",
     time: "150 分钟",
     difficulty: "中等",
@@ -243,9 +251,10 @@ window.RECIPES.su = [
     tips: "糖色上匀、小火久烧，皮糯而不腻是精髓。"
   },
   {
-    id: "su-xiluzhengyu",
+    
     name: "清蒸鲥鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "su-xiluzhengyu",
+    image: "assets/img/su-xiluzhengyu.jpg",
     desc: "银鳞脂丰，鲜嫩清雅，长江三鲜之首的苏式清蒸。",
     time: "45 分钟",
     difficulty: "中等",
@@ -273,9 +282,10 @@ window.RECIPES.su = [
     tips: "鲥鱼留鳞蒸更鲜美，旺火足气保持鱼肉细嫩。"
   },
   {
-    id: "su-sihaitangcai",
+    
     name: "四喜烤麸",
-    image: "assets/img/placeholder.jpg",
+    id: "su-sihaitangcai",
+    image: "assets/img/su-sihaitangcai.jpg",
     desc: "烤麸吸满浓汁，搭配香菇笋木耳，甜咸适口的冷盘。",
     time: "45 分钟",
     difficulty: "简单",

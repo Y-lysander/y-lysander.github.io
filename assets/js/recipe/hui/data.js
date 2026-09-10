@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.hui = [
   {
-    id: "hui-chouguoyu",
+    
     name: "臭鳜鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-chouguoyu",
+    image: "assets/img/hui-chouguoyu.jpg",
     desc: "闻着臭、吃着香，鳜鱼肉紧致细腻，徽菜头牌。",
     time: "80 分钟",
     difficulty: "较难",
@@ -38,9 +39,10 @@ window.RECIPES.hui = [
     tips: "臭鳜鱼的腊香在烧制中成为灵魂，火候足而肉质才紧而不柴。"
   },
   {
-    id: "hui-maodoufu",
+    
     name: "毛豆腐",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-maodoufu",
+    image: "assets/img/hui-maodoufu.jpg",
     desc: "表面毛茸茸，煎后外焦里嫩，鲜香中带着独特发酵味。",
     time: "30 分钟",
     difficulty: "中等",
@@ -67,9 +69,10 @@ window.RECIPES.hui = [
     tips: "煎制到外脆内软、表面染上金黄锅巴，才够诱人。"
   },
   {
-    id: "hui-yipinguo",
+    
     name: "一品锅",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-yipinguo",
+    image: "assets/img/hui-yipinguo.jpg",
     desc: "层层食材码于一锅，汤鲜味浓，暖胃暖心，徽州宴客菜。",
     time: "120 分钟",
     difficulty: "中等",
@@ -99,9 +102,10 @@ window.RECIPES.hui = [
     tips: "层层分明、汤鲜料足，火候循序渐进才能各食材恰到好处。"
   },
   {
-    id: "hui-huangshandunti",
+    
     name: "黄山炖鸽",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-huangshandunti",
+    image: "assets/img/hui-huangshandunti.jpg",
     desc: "鸽肉酥烂，汤清味醇，滋补温润的黄山名炖。",
     time: "120 分钟",
     difficulty: "简单",
@@ -127,9 +131,10 @@ window.RECIPES.hui = [
     tips: "文火慢炖、盐最后放，鸽汤清甜无腥味。"
   },
   {
-    id: "hui-wuweiban",
+    
     name: "无为板鸭",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-wuweiban",
+    image: "assets/img/hui-wuweiban.jpg",
     desc: "烟熏咸香，鸭肉紧实，佐饭下酒，无为特色名品。",
     time: "150 分钟",
     difficulty: "较难",
@@ -157,9 +162,10 @@ window.RECIPES.hui = [
     tips: "先卤后熏，茶香与腊香交织，皮色金黄、肉质紧实。"
   },
   {
-    id: "hui-lhz",
+    
     name: "李鸿章大杂烩",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-lhz",
+    image: "assets/img/hui-lhz.jpg",
     desc: "海陆诸味共烩，汤浓味厚，徽州宴席传奇名菜。",
     time: "60 分钟",
     difficulty: "中等",
@@ -190,9 +196,10 @@ window.RECIPES.hui = [
     tips: "多种食材分批下锅，荤素各保本味，汤醇味厚。"
   },
   {
-    id: "hui-chaofen",
+    
     name: "绩溪炒粉丝",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-chaofen",
+    image: "assets/img/hui-chaofen.jpg",
     desc: "粉丝爽滑弹韧，配料鲜美，家常而暖的绩溪味道。",
     time: "30 分钟",
     difficulty: "简单",
@@ -221,9 +228,10 @@ window.RECIPES.hui = [
     tips: "加水用铲拨炒不粘锅，出锅前收干汁粉条最弹。"
   },
   {
-    id: "hui-touzhengjiu",
+    
     name: "石头蛋圆子",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-touzhengjiu",
+    image: "assets/img/hui-touzhengjiu.jpg",
     desc: "外皮柔韧，内馅油香，咸鲜多层，徽州传统圆子。",
     time: "60 分钟",
     difficulty: "中等",
@@ -252,9 +260,10 @@ window.RECIPES.hui = [
     tips: "粉团捏实压紧，圆子蒸后才有韧性不破。"
   },
   {
-    id: "hui-huweizhudoufu",
+    
     name: "徽州炖豆腐",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-huweizhudoufu",
+    image: "assets/img/hui-huweizhudoufu.jpg",
     desc: "豆腐久炖入味，吸满鲜汤，朴素中见功夫的徽州家常。",
     time: "50 分钟",
     difficulty: "简单",
@@ -281,9 +290,10 @@ window.RECIPES.hui = [
     tips: "豆腐先焯后慢炖，细孔吸满咸鲜汤汁才够味。"
   },
   {
-    id: "hui-baqianbao",
+    
     name: "徽州毛豆烧仔鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "hui-baqianbao",
+    image: "assets/img/hui-baqianbao.jpg",
     desc: "毛豆清甜，仔鸡鲜嫩，咸鲜爽口的徽州家常小炒。",
     time: "35 分钟",
     difficulty: "简单",

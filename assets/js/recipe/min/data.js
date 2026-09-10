@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.min = [
   {
-    id: "min-fotiaoqiang",
+    
     name: "佛跳墙",
-    image: "assets/img/placeholder.jpg",
+    id: "min-fotiaoqiang",
+    image: "assets/img/min-fotiaoqiang.jpg",
     desc: "山珍海味共冶一炉，汤浓味醇，闽菜集大成之作。",
     time: "240 分钟",
     difficulty: "较难",
@@ -38,9 +39,10 @@ window.RECIPES.min = [
     tips: "以酒入坛、封坛慢炖，各种鲜味层层绽出。"
   },
   {
-    id: "min-lizhirou",
+    
     name: "荔枝肉",
-    image: "assets/img/placeholder.jpg",
+    id: "min-lizhirou",
+    image: "assets/img/min-lizhirou.jpg",
     desc: "形如荔枝，酸甜咸香，福州传统风味名菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -68,9 +70,10 @@ window.RECIPES.min = [
     tips: "花刀卷珠，形似荔枝，甜酸汁裹得匀才够味。"
   },
   {
-    id: "min-zuiji",
+    
     name: "醉鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "min-zuiji",
+    image: "assets/img/min-zuiji.jpg",
     desc: "酒香醇郁，鸡肉嫩滑，冷盘中的闽式风味。",
     time: "120 分钟",
     difficulty: "中等",
@@ -95,9 +98,10 @@ window.RECIPES.min = [
     tips: "充分浸泡入味，冷藏后酒香清爽、鸡皮弹嫩。"
   },
   {
-    id: "min-haiyoijian",
+    
     name: "海蛎煎",
-    image: "assets/img/placeholder.jpg",
+    id: "min-haiyoijian",
+    image: "assets/img/min-haiyoijian.jpg",
     desc: "海蛎鲜嫩，蛋香金黄，厦门街头最抚人心的小吃。",
     time: "20 分钟",
     difficulty: "简单",
@@ -124,9 +128,10 @@ window.RECIPES.min = [
     tips: "地瓜粉糊裹护海蛎，煎到外脆内嫩最出彩。"
   },
   {
-    id: "min-tusundong",
+    
     name: "土笋冻",
-    image: "assets/img/placeholder.jpg",
+    id: "min-tusundong",
+    image: "assets/img/min-tusundong.jpg",
     desc: "胶质通透似冻，口感爽滑弹韧，闽南独特风味。",
     time: "180 分钟",
     difficulty: "中等",
@@ -153,9 +158,10 @@ window.RECIPES.min = [
     tips: "小火久熬胶质足，冷藏凝冻才Q弹透亮。"
   },
   {
-    id: "min-sataniurou",
+    
     name: "沙茶牛肉",
-    image: "assets/img/placeholder.jpg",
+    id: "min-sataniurou",
+    image: "assets/img/min-sataniurou.jpg",
     desc: "沙茶酱咸香浓郁，牛肉嫩滑，闽南经典下饭菜。",
     time: "25 分钟",
     difficulty: "简单",
@@ -182,9 +188,10 @@ window.RECIPES.min = [
     tips: "沙茶酱要炒香炒匀，牛肉快炒保持滑嫩。"
   },
   {
-    id: "min-taipingyan",
+    
     name: "太平燕",
-    image: "assets/img/placeholder.jpg",
+    id: "min-taipingyan",
+    image: "assets/img/min-taipingyan.jpg",
     desc: "肉燕皮爽滑，汤清味鲜，寓意平安的福州传统汤。",
     time: "60 分钟",
     difficulty: "中等",
@@ -212,9 +219,10 @@ window.RECIPES.min = [
     tips: "皮薄馅足，汤清味鲜，煮到浮起即熟。"
   },
   {
-    id: "min-zuojiang",
+    
     name: "炝蛤蜊",
-    image: "assets/img/placeholder.jpg",
+    id: "min-zuojiang",
+    image: "assets/img/min-zuojiang.jpg",
     desc: "蛤蜊鲜嫩，芡汁滑润，福州酒席上的时令鲜味。",
     time: "25 分钟",
     difficulty: "简单",
@@ -241,9 +249,10 @@ window.RECIPES.min = [
     tips: "蛤蜊开口即捞保嫩，汤汁清鲜勾薄芡滑口。"
   },
   {
-    id: "min-dingbianhu",
+    
     name: "鼎边糊",
-    image: "assets/img/placeholder.jpg",
+    id: "min-dingbianhu",
+    image: "assets/img/min-dingbianhu.jpg",
     desc: "米浆沿锅边烫成薄片，汤鲜糊滑，福州晨间风味。",
     time: "30 分钟",
     difficulty: "简单",
@@ -270,9 +279,10 @@ window.RECIPES.min = [
     tips: "米浆沿热锅边烫成薄糊才算正宗鼎边糊。"
   },
   {
-    id: "min-zhiwanzi",
+    
     name: "芝麻圆子",
-    image: "assets/img/placeholder.jpg",
+    id: "min-zhiwanzi",
+    image: "assets/img/min-zhiwanzi.jpg",
     desc: "外糯里酥，芝麻香浓，酥甜宜人的闽式甜点。",
     time: "40 分钟",
     difficulty: "简单",

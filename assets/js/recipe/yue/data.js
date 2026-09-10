@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.yue = [
   {
-    id: "yue-baiqieji",
+    
     name: "白切鸡",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-baiqieji",
+    image: "assets/img/yue-baiqieji.jpg",
     desc: "皮爽肉滑，清淡鲜美，最能体现粤菜原味的功夫菜。",
     time: "60 分钟",
     difficulty: "中等",
@@ -33,9 +34,10 @@ window.RECIPES.yue = [
     tips: "浸煮加冰水定型，皮爽肉滑是白切鸡的成败关键。"
   },
   {
-    id: "yue-mizhicha",
+    
     name: "蜜汁叉烧",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-mizhicha",
+    image: "assets/img/yue-mizhicha.jpg",
     desc: "蜜色油亮，甜咸焦香，广式烧腊的招牌门面。",
     time: "180 分钟",
     difficulty: "中等",
@@ -62,9 +64,10 @@ window.RECIPES.yue = [
     tips: "反复刷蜜、低温慢烤，成品才油亮甜香不干柴。"
   },
   {
-    id: "yue-qingzhengluyu",
+    
     name: "清蒸鲈鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-qingzhengluyu",
+    image: "assets/img/yue-qingzhengluyu.jpg",
     desc: "鱼肉嫩滑鲜美，豉油提鲜，广式蒸鱼的经典之作。",
     time: "30 分钟",
     difficulty: "简单",
@@ -89,9 +92,10 @@ window.RECIPES.yue = [
     tips: "大火快蒸、火候恰好，热油激发是点睛之笔。"
   },
   {
-    id: "yue-guangshaoe",
+    
     name: "广式烧鹅",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-guangshaoe",
+    image: "assets/img/yue-guangshaoe.jpg",
     desc: "皮脆肉嫩，肥而不腻，岭南烧腊中的宴请头牌。",
     time: "200 分钟",
     difficulty: "较难",
@@ -118,9 +122,10 @@ window.RECIPES.yue = [
     tips: "糖水晾干皮才脆，先高后低温烤出酥亮脆皮。"
   },
   {
-    id: "yue-chishengpaigu",
+    
     name: "豉汁蒸排骨",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-chishengpaigu",
+    image: "assets/img/yue-chishengpaigu.jpg",
     desc: "排骨嫩滑，豉香浓郁，粤式茶楼必点的蒸点。",
     time: "40 分钟",
     difficulty: "简单",
@@ -148,9 +153,10 @@ window.RECIPES.yue = [
     tips: "淀粉锁住汁水，大火快蒸排骨才嫩滑不柴。"
   },
   {
-    id: "yue-ganchaoni",
+    
     name: "干炒牛河",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-ganchaoni",
+    image: "assets/img/yue-ganchaoni.jpg",
     desc: "河粉干香弹滑，牛肉嫩滑，广式宵夜的灵魂代表。",
     time: "25 分钟",
     difficulty: "中等",
@@ -179,9 +185,10 @@ window.RECIPES.yue = [
     tips: "锅一定要热，河粉干香不粘的关键在猛火快炒。"
   },
   {
-    id: "yue-huadanxia",
+    
     name: "滑蛋虾仁",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-huadanxia",
+    image: "assets/img/yue-huadanxia.jpg",
     desc: "蛋滑虾爽，花一样的嫩蛋，广东家常席上佳肴。",
     time: "20 分钟",
     difficulty: "简单",
@@ -207,9 +214,10 @@ window.RECIPES.yue = [
     tips: "小火慢推、蛋液将凝未凝时才最滑嫩。"
   },
   {
-    id: "yue-haoyoushengcai",
+    
     name: "蚝油生菜",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-haoyoushengcai",
+    image: "assets/img/yue-haoyoushengcai.jpg",
     desc: "生菜爽脆，蚝香浓郁，快手上桌的广式素菜。",
     time: "15 分钟",
     difficulty: "简单",
@@ -235,9 +243,10 @@ window.RECIPES.yue = [
     tips: "焯水快、过凉快，生菜才能爽脆翠绿。"
   },
   {
-    id: "yue-gulurou",
+    
     name: "咕噜肉",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-gulurou",
+    image: "assets/img/yue-gulurou.jpg",
     desc: "外酥里嫩，酸甜开胃，搭配彩椒洋葱的酸甜肉。",
     time: "35 分钟",
     difficulty: "中等",
@@ -266,9 +275,10 @@ window.RECIPES.yue = [
     tips: "肉块炸到外脆，回锅裹汁迅速才保持酥口。"
   },
   {
-    id: "yue-laohuoliangtang",
+    
     name: "老火靓汤",
-    image: "assets/img/placeholder.jpg",
+    id: "yue-laohuoliangtang",
+    image: "assets/img/yue-laohuoliangtang.jpg",
     desc: "文火慢煲，汤清味浓，滋补养人的广东家常汤品。",
     time: "180 分钟",
     difficulty: "简单",

@@ -5,9 +5,10 @@
 window.RECIPES = window.RECIPES || {};
 window.RECIPES.zhe = [
   {
-    id: "zhe-xihucuoyu",
+    
     name: "西湖醋鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-xihucuoyu",
+    image: "assets/img/zhe-xihucuoyu.jpg",
     desc: "芡汁透亮，酸甜带姜香，杭州西湖边的招牌名菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -34,9 +35,10 @@ window.RECIPES.zhe = [
     tips: "鱼肉嫩而不碎，芡汁酸甜透亮是成败关键。"
   },
   {
-    id: "zhe-dongporou",
+    
     name: "东坡肉",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-dongporou",
+    image: "assets/img/zhe-dongporou.jpg",
     desc: "色泽红亮，酥而不碎、肥而不腻，以苏轼命名的名菜。",
     time: "150 分钟",
     difficulty: "中等",
@@ -62,9 +64,10 @@ window.RECIPES.zhe = [
     tips: "小火久焖入味，火候足则酥而不碎、肥而不腻。"
   },
   {
-    id: "zhe-longjingxiaren",
+    
     name: "龙井虾仁",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-longjingxiaren",
+    image: "assets/img/zhe-longjingxiaren.jpg",
     desc: "虾仁玉白弹嫩，茶香清雅，杭州风雅之极的代表菜。",
     time: "30 分钟",
     difficulty: "中等",
@@ -90,9 +93,10 @@ window.RECIPES.zhe = [
     tips: "虾仁上浆滑嫩，茶香清雅，火候快而短。"
   },
   {
-    id: "zhe-songsao",
+    
     name: "宋嫂鱼羹",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-songsao",
+    image: "assets/img/zhe-songsao.jpg",
     desc: "鱼羹滑嫩，汤鲜酸辣开胃，源自杭城的传统名羹。",
     time: "50 分钟",
     difficulty: "中等",
@@ -121,9 +125,10 @@ window.RECIPES.zhe = [
     tips: "羹要滑而不腻，酸辣开胃，鱼鲜尽在其中。"
   },
   {
-    id: "zhe-youmenchunsun",
+    
     name: "油焖春笋",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-youmenchunsun",
+    image: "assets/img/zhe-youmenchunsun.jpg",
     desc: "春笋鲜嫩脆甜，油亮咸香，春季餐桌上的一口鲜。",
     time: "25 分钟",
     difficulty: "简单",
@@ -149,9 +154,10 @@ window.RECIPES.zhe = [
     tips: "油足火候到，焖出光亮油润才显鲜甜。"
   },
   {
-    id: "zhe-mizhihuofang",
+    
     name: "蜜汁火方",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-mizhihuofang",
+    image: "assets/img/zhe-mizhihuofang.jpg",
     desc: "火腿蜜香软糯，甜咸相济，讲究无比的传统名菜。",
     time: "120 分钟",
     difficulty: "较难",
@@ -177,9 +183,10 @@ window.RECIPES.zhe = [
     tips: "多次蒸制去咸增甜，甜咸交融、软糯不腻。"
   },
   {
-    id: "zhe-gancaimenrou",
+    
     name: "干菜焖肉",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-gancaimenrou",
+    image: "assets/img/zhe-gancaimenrou.jpg",
     desc: "霉干菜吸足肉汁，肉酥香浓，绍兴的家常美味。",
     time: "120 分钟",
     difficulty: "中等",
@@ -205,9 +212,10 @@ window.RECIPES.zhe = [
     tips: "干菜配肉久焖，越焖越香，收汁恰到好处。"
   },
   {
-    id: "zhe-xuecaihuangyu",
+    
     name: "雪菜黄鱼",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-xuecaihuangyu",
+    image: "assets/img/zhe-xuecaihuangyu.jpg",
     desc: "黄鱼鲜嫩，雪菜咸鲜，宁波风味的经典下饭菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -234,9 +242,10 @@ window.RECIPES.zhe = [
     tips: "雪菜咸鲜与黄鱼绝配，先煎后烧汤鲜味足。"
   },
   {
-    id: "zhe-hangsunkaoyao",
+    
     name: "杭椒牛柳",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-hangsunkaoyao",
+    image: "assets/img/zhe-hangsunkaoyao.jpg",
     desc: "牛柳嫩滑，杭椒清鲜微辣，家常又提味的搭配。",
     time: "20 分钟",
     difficulty: "简单",
@@ -263,9 +272,10 @@ window.RECIPES.zhe = [
     tips: "牛肉上浆快炒保持嫩滑，椒香提味。"
   },
   {
-    id: "zhe-zhaoshienuo",
+    
     name: "炸响铃",
-    image: "assets/img/placeholder.jpg",
+    id: "zhe-zhaoshienuo",
+    image: "assets/img/zhe-zhaoshienuo.jpg",
     desc: "腐皮炸至金黄酥脆，咔咔作响，杭州的素味小点。",
     time: "25 分钟",
     difficulty: "简单",
