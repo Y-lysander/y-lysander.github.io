@@ -282,6 +282,15 @@ body {
   font-size: 14px;
 }
 
+/* 首页点睛语（取代大标题，更为凝练） */
+.section-head .lead {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 19px;
+  letter-spacing: 6px;
+  color: var(--gold);
+}
+
 /* 标题两侧的祥云对饰 */
 .auspice {
   display: flex;
@@ -854,7 +863,9 @@ body {
   position: fixed;
   left: 50%;
   bottom: 18px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
   width: min(760px, 94vw);
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -865,6 +876,19 @@ body {
   box-shadow: 0 10px 36px rgba(5,9,16,.55), inset 0 0 22px rgba(230,198,122,.05);
   border-radius: 40px;
   z-index: 50;
+  transition: transform .65s cubic-bezier(.22,.61,.36,1),
+              opacity .65s ease,
+              visibility 0s linear .65s;
+}
+
+/* 飞出屏外（主页/收藏页隐藏导航） */
+.cuisine-dock.out {
+  transform: translateX(-50%) translateY(calc(100% + 40px));
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .42s cubic-bezier(.55,0,.55,1),
+              opacity .42s ease,
+              visibility 0s linear .42s;
 }
 
 .dock-item {
