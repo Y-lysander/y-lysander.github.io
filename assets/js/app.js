@@ -61,13 +61,24 @@ const HEART_SVG = (filled) =>
        fill="${filled ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
    </svg>`;
 
+/* 祥云纹（中国元素点缀，inline SVG 便于铺色/镜像） */
+const SWIRL_SVG = `
+  <svg viewBox="0 0 60 38" width="54" height="34" fill="none" stroke="currentColor"
+       stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="20" cy="25" r="11"/>
+    <circle cx="36" cy="18" r="14"/>
+    <circle cx="50" cy="26" r="9"/>
+    <path d="M7 25a6.5 6.5 0 0 0 6 6.5h34a6.5 6.5 0 0 0 6-6.5" opacity=".8"/>
+    <path d="M36 18c-4-4 1-9 5-7" opacity=".55"/>
+  </svg>`;
+
 /* ---------- 渲染：菜谱网格 ---------- */
 function recipeTileHTML(r, { showCuisine = true } = {}) {
   const c = CUISINE_MAP[r.cuisine];
   const fav = isFav(r.id);
   const badge = showCuisine ? `<span class="badge-cuisine">${c.name}</span>` : "";
   return `
-    <article class="recipe-tile" data-route="/recipe/${r.id}">
+    <article class="recipe-tile" data-route="/recipe/${r.id}" style="--cuisine-color:${c.color}">
       <div class="thumb">
         ${badge}
         <img src="${r.image}" alt="${esc(r.name)}" loading="lazy">
@@ -101,12 +112,24 @@ function renderHome() {
         </button>`;
     }).join("");
     inner = `
-      <div class="view">
+      <div class="view home">
+        ${(() => {
+          const deco = ["chuan-gongbaojiding", "zhe-dongporou", "su-songshuguaiyu", "min-fotiaoqiang"]
+            .map(id => getRecipe(id))
+            .filter(Boolean)
+            .map((r, i) => `<img class="deco-dish d${i + 1}" src="${r.image}" alt="" loading="lazy">`)
+            .join("");
+          return `<div class="home-deco" aria-hidden="true">${deco}</div>`;
+        })()}
         <div class="section-head">
-          <span class="kicker">Eight Cuisines</span>
+          <div class="auspice" aria-hidden="true">
+            <span class="swirl">${SWIRL_SVG}</span>
+            <span class="kicker">Eight Cuisines</span>
+            <span class="swirl mirror">${SWIRL_SVG}</span>
+          </div>
           <h1>八大菜系</h1>
           <p>山川风物，尽在一方烟火</p>
-          <div class="rule"></div>
+          <div class="rule"><span class="gem"></span></div>
         </div>
         <div class="cuisine-strip">${tiles}</div>
         <p class="footer-note">选一道称心的菜，为今日添一味温暖</p>
@@ -120,7 +143,7 @@ function renderCuisine(key) {
   const c = CUISINE_MAP[key];
   if (!c) { renderHome(); return; }
   const recipes = window.RECIPES[key] || [];
-  const tiles = recipes.map(r => recipeTileHTML(r, { showCuisine: false })).join("");
+  const tiles = recipes.map(r => recipeTileHTML({ ...r, cuisine: key }, { showCuisine: false })).join("");
   $("#viewRoot").innerHTML = `
     <div class="view">
       <button class="btn-back" data-route="/home">← 返回首页</button>
@@ -131,7 +154,16 @@ function renderCuisine(key) {
           <p class="motto">${c.motto} · ${c.en}</p>
         </div>
       </div>
+      <div class="cuisine-rule" aria-hidden="true">
+        <span class="swirl">${SWIRL_SVG}</span>
+        <span class="rule"><span class="gem"></span></span>
+        <span class="swirl mirror">${SWIRL_SVG}</span>
+      </div>
       <div class="recipe-grid">${tiles}</div>
+      <div class="dock-connect">
+        <span class="rule-sm"></span>
+        <p>浏览完这 ${recipes.length} 道${c.name}，可在底部导航切换其他菜系</p>
+      </div>
     </div>`;
   patchDockActive(key);
 }
