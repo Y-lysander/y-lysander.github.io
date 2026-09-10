@@ -95,7 +95,6 @@ function recipeTileHTML(r, { showCuisine = true } = {}) {
 
 /* ---------- 视图：主界面 ---------- */
 function renderHome() {
-  setDock(false);
   patchDockActive(null);
   const hasSearch = $("#searchInput").value.trim();
   let inner;
@@ -142,7 +141,6 @@ function renderHome() {
 function renderCuisine(key) {
   const c = CUISINE_MAP[key];
   if (!c) { renderHome(); return; }
-  setDock(true);
   const recipes = window.RECIPES[key] || [];
   const tiles = recipes.map(r => recipeTileHTML({ ...r, cuisine: key }, { showCuisine: false })).join("");
   $("#viewRoot").innerHTML = `
@@ -173,7 +171,6 @@ function renderCuisine(key) {
 function renderRecipe(id) {
   const r = getRecipe(id);
   if (!r) { renderHome(); return; }
-  setDock(true);
   const c = CUISINE_MAP[r.cuisine];
   const fav = isFav(id);
   const ingList = r.ingredients.map(i =>
@@ -230,7 +227,6 @@ function formatAmount(item) { return item.unit ? `${item.amount} ${item.unit}` :
 
 /* ---------- 视图：收藏页 ---------- */
 function renderFavorites() {
-  setDock(false);
   const favs = getFavorites();
   const recipes = allRecipes().filter(r => favs.includes(r.id));
   let body;
@@ -324,10 +320,6 @@ function patchDockActive(activeKey) {
     b.classList.toggle("active", b.dataset.route === `/cuisine/${activeKey}`);
   });
 }
-/* 底部导航显隐：主页面/收藏页飞出，菜系页缓缓飞入 */
-function setDock(visible) {
-  $("#cuisineDock").classList.toggle("out", !visible);
-}
 
 /* ---------- 事件 ---------- */
 function bindEvents() {
@@ -400,7 +392,6 @@ function bindEvents() {
 /* ---------- 启动 ---------- */
 (function init() {
   buildDock();
-  $("#cuisineDock").classList.add("out");
   updateFavBadge();
   bindEvents();
   window.addEventListener("hashchange", navigate);

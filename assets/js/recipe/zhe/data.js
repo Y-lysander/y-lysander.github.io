@@ -8,7 +8,7 @@ window.RECIPES.zhe = [
     
     name: "西湖醋鱼",
     id: "zhe-xihucuoyu",
-    image: "assets/img/zhe-xihucuoyu.jpg",
+    image: "assets/img/zhe-xihucuoyu.webp",
     desc: "芡汁透亮，酸甜带姜香，杭州西湖边的招牌名菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -38,7 +38,7 @@ window.RECIPES.zhe = [
     
     name: "东坡肉",
     id: "zhe-dongporou",
-    image: "assets/img/zhe-dongporou.jpg",
+    image: "assets/img/zhe-dongporou.webp",
     desc: "色泽红亮，酥而不碎、肥而不腻，以苏轼命名的名菜。",
     time: "150 分钟",
     difficulty: "中等",
@@ -67,7 +67,7 @@ window.RECIPES.zhe = [
     
     name: "龙井虾仁",
     id: "zhe-longjingxiaren",
-    image: "assets/img/zhe-longjingxiaren.jpg",
+    image: "assets/img/zhe-longjingxiaren.webp",
     desc: "虾仁玉白弹嫩，茶香清雅，杭州风雅之极的代表菜。",
     time: "30 分钟",
     difficulty: "中等",
@@ -96,7 +96,7 @@ window.RECIPES.zhe = [
     
     name: "宋嫂鱼羹",
     id: "zhe-songsao",
-    image: "assets/img/zhe-songsao.jpg",
+    image: "assets/img/zhe-songsao.webp",
     desc: "鱼羹滑嫩，汤鲜酸辣开胃，源自杭城的传统名羹。",
     time: "50 分钟",
     difficulty: "中等",
@@ -128,7 +128,7 @@ window.RECIPES.zhe = [
     
     name: "油焖春笋",
     id: "zhe-youmenchunsun",
-    image: "assets/img/zhe-youmenchunsun.jpg",
+    image: "assets/img/zhe-youmenchunsun.webp",
     desc: "春笋鲜嫩脆甜，油亮咸香，春季餐桌上的一口鲜。",
     time: "25 分钟",
     difficulty: "简单",
@@ -157,7 +157,7 @@ window.RECIPES.zhe = [
     
     name: "蜜汁火方",
     id: "zhe-mizhihuofang",
-    image: "assets/img/zhe-mizhihuofang.jpg",
+    image: "assets/img/zhe-mizhihuofang.webp",
     desc: "火腿蜜香软糯，甜咸相济，讲究无比的传统名菜。",
     time: "120 分钟",
     difficulty: "较难",
@@ -186,7 +186,7 @@ window.RECIPES.zhe = [
     
     name: "干菜焖肉",
     id: "zhe-gancaimenrou",
-    image: "assets/img/zhe-gancaimenrou.jpg",
+    image: "assets/img/zhe-gancaimenrou.webp",
     desc: "霉干菜吸足肉汁，肉酥香浓，绍兴的家常美味。",
     time: "120 分钟",
     difficulty: "中等",
@@ -215,7 +215,7 @@ window.RECIPES.zhe = [
     
     name: "雪菜黄鱼",
     id: "zhe-xuecaihuangyu",
-    image: "assets/img/zhe-xuecaihuangyu.jpg",
+    image: "assets/img/zhe-xuecaihuangyu.webp",
     desc: "黄鱼鲜嫩，雪菜咸鲜，宁波风味的经典下饭菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -245,7 +245,7 @@ window.RECIPES.zhe = [
     
     name: "杭椒牛柳",
     id: "zhe-hangsunkaoyao",
-    image: "assets/img/zhe-hangsunkaoyao.jpg",
+    image: "assets/img/zhe-hangsunkaoyao.webp",
     desc: "牛柳嫩滑，杭椒清鲜微辣，家常又提味的搭配。",
     time: "20 分钟",
     difficulty: "简单",
@@ -275,7 +275,7 @@ window.RECIPES.zhe = [
     
     name: "炸响铃",
     id: "zhe-zhaoshienuo",
-    image: "assets/img/zhe-zhaoshienuo.jpg",
+    image: "assets/img/zhe-zhaoshienuo.webp",
     desc: "腐皮炸至金黄酥脆，咔咔作响，杭州的素味小点。",
     time: "25 分钟",
     difficulty: "简单",

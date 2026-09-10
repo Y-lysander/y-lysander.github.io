@@ -8,7 +8,7 @@ window.RECIPES.su = [
     
     name: "红烧狮子头",
     id: "su-hongshaoshizitou",
-    image: "assets/img/su-hongshaoshizitou.jpg",
+    image: "assets/img/su-hongshaoshizitou.webp",
     desc: "肉圆硕大软糯，肥瘦相宜，淮扬功夫菜的看家名品。",
     time: "120 分钟",
     difficulty: "中等",
@@ -41,7 +41,7 @@ window.RECIPES.su = [
     
     name: "松鼠桂鱼",
     id: "su-songshuguaiyu",
-    image: "assets/img/su-songshuguaiyu.jpg",
+    image: "assets/img/su-songshuguaiyu.webp",
     desc: "形如松鼠，外酥里嫩，浇酸甜汁的苏帮宴席头菜。",
     time: "60 分钟",
     difficulty: "较难",
@@ -73,7 +73,7 @@ window.RECIPES.su = [
     
     name: "大煮干丝",
     id: "su-dazhuganshi",
-    image: "assets/img/su-dazhuganshi.jpg",
+    image: "assets/img/su-dazhuganshi.webp",
     desc: "干丝细如发丝，汤鲜味醇，扬州早茶名点。",
     time: "40 分钟",
     difficulty: "中等",
@@ -103,7 +103,7 @@ window.RECIPES.su = [
     
     name: "盐水鸭",
     id: "su-yanshuiya",
-    image: "assets/img/su-yanshuiya.jpg",
+    image: "assets/img/su-yanshuiya.webp",
     desc: "咸香适度，皮白肉嫩，南京的一张风味名片。",
     time: "150 分钟",
     difficulty: "中等",
@@ -133,7 +133,7 @@ window.RECIPES.su = [
     
     name: "蟹粉豆腐",
     id: "su-xiefendoufu",
-    image: "assets/img/su-xiefendoufu.jpg",
+    image: "assets/img/su-xiefendoufu.webp",
     desc: "豆腐嫩滑，蟹粉鲜香，淮扬席上的细腻佳肴。",
     time: "30 分钟",
     difficulty: "中等",
@@ -164,7 +164,7 @@ window.RECIPES.su = [
     
     name: "糖醋排骨",
     id: "su-tangcupaigu",
-    image: "assets/img/su-tangcupaigu.jpg",
+    image: "assets/img/su-tangcupaigu.webp",
     desc: "色泽红亮，酸甜适口，江浙餐桌最受欢迎的家常菜。",
     time: "45 分钟",
     difficulty: "简单",
@@ -194,7 +194,7 @@ window.RECIPES.su = [
     
     name: "叫花鸡",
     id: "su-jiaohuaji",
-    image: "assets/img/su-jiaohuaji.jpg",
+    image: "assets/img/su-jiaohuaji.webp",
     desc: "荷叶裹泥烤制，鸡肉酥烂脱骨，风味独特的名菜。",
     time: "180 分钟",
     difficulty: "较难",
@@ -224,7 +224,7 @@ window.RECIPES.su = [
     
     name: "东坡肘子",
     id: "su-dongpojirou",
-    image: "assets/img/su-dongpojirou.jpg",
+    image: "assets/img/su-dongpojirou.webp",
     desc: "肥而不腻，软糯酥香，以文豪苏轼命名的经典硬菜。",
     time: "150 分钟",
     difficulty: "中等",
@@ -254,7 +254,7 @@ window.RECIPES.su = [
     
     name: "清蒸鲥鱼",
     id: "su-xiluzhengyu",
-    image: "assets/img/su-xiluzhengyu.jpg",
+    image: "assets/img/su-xiluzhengyu.webp",
     desc: "银鳞脂丰，鲜嫩清雅，长江三鲜之首的苏式清蒸。",
     time: "45 分钟",
     difficulty: "中等",
@@ -285,7 +285,7 @@ window.RECIPES.su = [
     
     name: "四喜烤麸",
     id: "su-sihaitangcai",
-    image: "assets/img/su-sihaitangcai.jpg",
+    image: "assets/img/su-sihaitangcai.webp",
     desc: "烤麸吸满浓汁，搭配香菇笋木耳，甜咸适口的冷盘。",
     time: "45 分钟",
     difficulty: "简单",

@@ -8,7 +8,7 @@ window.RECIPES.hui = [
     
     name: "臭鳜鱼",
     id: "hui-chouguoyu",
-    image: "assets/img/hui-chouguoyu.jpg",
+    image: "assets/img/hui-chouguoyu.webp",
     desc: "闻着臭、吃着香，鳜鱼肉紧致细腻，徽菜头牌。",
     time: "80 分钟",
     difficulty: "较难",
@@ -42,7 +42,7 @@ window.RECIPES.hui = [
     
     name: "毛豆腐",
     id: "hui-maodoufu",
-    image: "assets/img/hui-maodoufu.jpg",
+    image: "assets/img/hui-maodoufu.webp",
     desc: "表面毛茸茸，煎后外焦里嫩，鲜香中带着独特发酵味。",
     time: "30 分钟",
     difficulty: "中等",
@@ -72,7 +72,7 @@ window.RECIPES.hui = [
     
     name: "一品锅",
     id: "hui-yipinguo",
-    image: "assets/img/hui-yipinguo.jpg",
+    image: "assets/img/hui-yipinguo.webp",
     desc: "层层食材码于一锅，汤鲜味浓，暖胃暖心，徽州宴客菜。",
     time: "120 分钟",
     difficulty: "中等",
@@ -105,7 +105,7 @@ window.RECIPES.hui = [
     
     name: "黄山炖鸽",
     id: "hui-huangshandunti",
-    image: "assets/img/hui-huangshandunti.jpg",
+    image: "assets/img/hui-huangshandunti.webp",
     desc: "鸽肉酥烂，汤清味醇，滋补温润的黄山名炖。",
     time: "120 分钟",
     difficulty: "简单",
@@ -134,7 +134,7 @@ window.RECIPES.hui = [
     
     name: "无为板鸭",
     id: "hui-wuweiban",
-    image: "assets/img/hui-wuweiban.jpg",
+    image: "assets/img/hui-wuweiban.webp",
     desc: "烟熏咸香，鸭肉紧实，佐饭下酒，无为特色名品。",
     time: "150 分钟",
     difficulty: "较难",
@@ -165,7 +165,7 @@ window.RECIPES.hui = [
     
     name: "李鸿章大杂烩",
     id: "hui-lhz",
-    image: "assets/img/hui-lhz.jpg",
+    image: "assets/img/hui-lhz.webp",
     desc: "海陆诸味共烩，汤浓味厚，徽州宴席传奇名菜。",
     time: "60 分钟",
     difficulty: "中等",
@@ -199,7 +199,7 @@ window.RECIPES.hui = [
     
     name: "绩溪炒粉丝",
     id: "hui-chaofen",
-    image: "assets/img/hui-chaofen.jpg",
+    image: "assets/img/hui-chaofen.webp",
     desc: "粉丝爽滑弹韧，配料鲜美，家常而暖的绩溪味道。",
     time: "30 分钟",
     difficulty: "简单",
@@ -231,7 +231,7 @@ window.RECIPES.hui = [
     
     name: "石头蛋圆子",
     id: "hui-touzhengjiu",
-    image: "assets/img/hui-touzhengjiu.jpg",
+    image: "assets/img/hui-touzhengjiu.webp",
     desc: "外皮柔韧，内馅油香，咸鲜多层，徽州传统圆子。",
     time: "60 分钟",
     difficulty: "中等",
@@ -263,7 +263,7 @@ window.RECIPES.hui = [
     
     name: "徽州炖豆腐",
     id: "hui-huweizhudoufu",
-    image: "assets/img/hui-huweizhudoufu.jpg",
+    image: "assets/img/hui-huweizhudoufu.webp",
     desc: "豆腐久炖入味，吸满鲜汤，朴素中见功夫的徽州家常。",
     time: "50 分钟",
     difficulty: "简单",
@@ -293,7 +293,7 @@ window.RECIPES.hui = [
     
     name: "徽州毛豆烧仔鸡",
     id: "hui-baqianbao",
-    image: "assets/img/hui-baqianbao.jpg",
+    image: "assets/img/hui-baqianbao.webp",
     desc: "毛豆清甜，仔鸡鲜嫩，咸鲜爽口的徽州家常小炒。",
     time: "35 分钟",
     difficulty: "简单",

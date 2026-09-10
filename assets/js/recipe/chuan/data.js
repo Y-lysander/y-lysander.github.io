@@ -7,7 +7,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-gongbaojiding",
     name: "宫保鸡丁",
-    image: "assets/img/chuan-gongbaojiding.jpg",
+    image: "assets/img/chuan-gongbaojiding.webp",
     desc: "糊辣荔枝味的经典川菜，鸡丁滑嫩，花生酥脆，甜酸微辣回味无穷。",
     time: "25 分钟",
     difficulty: "中等",
@@ -42,7 +42,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-mapodoufu",
     name: "麻婆豆腐",
-    image: "assets/img/chuan-mapodoufu.jpg",
+    image: "assets/img/chuan-mapodoufu.webp",
     desc: "麻辣鲜香烫嫩俱全，豆腐嫩滑，牛肉末香酥，是川菜家常灵魂。",
     time: "20 分钟",
     difficulty: "简单",
@@ -76,7 +76,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-huiguorou",
     name: "回锅肉",
-    image: "assets/img/chuan-huiguorou.jpg",
+    image: "assets/img/chuan-huiguorou.webp",
     desc: "肥而不腻，酱香咸鲜微辣，五花二煮一炒，镬气十足的下饭神器。",
     time: "35 分钟",
     difficulty: "中等",
@@ -108,7 +108,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-shuizhuniu",
     name: "水煮牛肉",
-    image: "assets/img/chuan-shuizhuniu.jpg",
+    image: "assets/img/chuan-shuizhuniu.webp",
     desc: "麻辣滚烫，牛肉滑嫩，垫底蔬菜吸满汤汁，川式水煮一绝。",
     time: "30 分钟",
     difficulty: "中等",
@@ -143,7 +143,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-yuxiangrousi",
     name: "鱼香肉丝",
-    image: "assets/img/chuan-yuxiangrousi.jpg",
+    image: "assets/img/chuan-yuxiangrousi.webp",
     desc: "鱼香不见鱼，咸甜酸辣兼具，肉丝嫩滑配爽脆木耳笋丝。",
     time: "25 分钟",
     difficulty: "简单",
@@ -178,7 +178,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-fuqipaipian",
     name: "夫妻肺片",
-    image: "assets/img/chuan-fuqipaipian.jpg",
+    image: "assets/img/chuan-fuqipaipian.webp",
     desc: "红油卤香，麻辣咸鲜，牛杂薄片配香酥花生，川味凉菜代表。",
     time: "45 分钟",
     difficulty: "中等",
@@ -211,7 +211,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-laziji",
     name: "辣子鸡丁",
-    image: "assets/img/chuan-laziji.jpg",
+    image: "assets/img/chuan-laziji.webp",
     desc: "辣椒堆里找鸡丁，外酥里嫩，干香麻辣，下酒绝配。",
     time: "30 分钟",
     difficulty: "中等",
@@ -245,7 +245,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-suancaiyu",
     name: "酸菜鱼",
-    image: "assets/img/chuan-suancaiyu.jpg",
+    image: "assets/img/chuan-suancaiyu.webp",
     desc: "酸辣开胃，鱼片嫩滑，酸菜爽脆，汤浓味香人人爱。",
     time: "40 分钟",
     difficulty: "中等",
@@ -279,7 +279,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-suanrou",
     name: "蒜泥白肉",
-    image: "assets/img/chuan-suanrou.jpg",
+    image: "assets/img/chuan-suanrou.webp",
     desc: "肥瘦相间薄片，蒜香浓郁，麻辣鲜香，川式凉菜爽口代表。",
     time: "30 分钟",
     difficulty: "简单",
@@ -309,7 +309,7 @@ window.RECIPES.chuan = [
   {
     id: "chuan-shuizhupian",
     name: "水煮肉片",
-    image: "assets/img/chuan-shuizhupian.jpg",
+    image: "assets/img/chuan-shuizhupian.webp",
     desc: "麻辣鲜嫩，肉片滑烫，汤汁浓郁，川菜水煮风范尽显。",
     time: "30 分钟",
     difficulty: "中等",

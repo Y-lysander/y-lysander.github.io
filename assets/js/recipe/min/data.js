@@ -8,7 +8,7 @@ window.RECIPES.min = [
     
     name: "佛跳墙",
     id: "min-fotiaoqiang",
-    image: "assets/img/min-fotiaoqiang.jpg",
+    image: "assets/img/min-fotiaoqiang.webp",
     desc: "山珍海味共冶一炉，汤浓味醇，闽菜集大成之作。",
     time: "240 分钟",
     difficulty: "较难",
@@ -42,7 +42,7 @@ window.RECIPES.min = [
     
     name: "荔枝肉",
     id: "min-lizhirou",
-    image: "assets/img/min-lizhirou.jpg",
+    image: "assets/img/min-lizhirou.webp",
     desc: "形如荔枝，酸甜咸香，福州传统风味名菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -73,7 +73,7 @@ window.RECIPES.min = [
     
     name: "醉鸡",
     id: "min-zuiji",
-    image: "assets/img/min-zuiji.jpg",
+    image: "assets/img/min-zuiji.webp",
     desc: "酒香醇郁，鸡肉嫩滑，冷盘中的闽式风味。",
     time: "120 分钟",
     difficulty: "中等",
@@ -101,7 +101,7 @@ window.RECIPES.min = [
     
     name: "海蛎煎",
     id: "min-haiyoijian",
-    image: "assets/img/min-haiyoijian.jpg",
+    image: "assets/img/min-haiyoijian.webp",
     desc: "海蛎鲜嫩，蛋香金黄，厦门街头最抚人心的小吃。",
     time: "20 分钟",
     difficulty: "简单",
@@ -131,7 +131,7 @@ window.RECIPES.min = [
     
     name: "土笋冻",
     id: "min-tusundong",
-    image: "assets/img/min-tusundong.jpg",
+    image: "assets/img/min-tusundong.webp",
     desc: "胶质通透似冻，口感爽滑弹韧，闽南独特风味。",
     time: "180 分钟",
     difficulty: "中等",
@@ -161,7 +161,7 @@ window.RECIPES.min = [
     
     name: "沙茶牛肉",
     id: "min-sataniurou",
-    image: "assets/img/min-sataniurou.jpg",
+    image: "assets/img/min-sataniurou.webp",
     desc: "沙茶酱咸香浓郁，牛肉嫩滑，闽南经典下饭菜。",
     time: "25 分钟",
     difficulty: "简单",
@@ -191,7 +191,7 @@ window.RECIPES.min = [
     
     name: "太平燕",
     id: "min-taipingyan",
-    image: "assets/img/min-taipingyan.jpg",
+    image: "assets/img/min-taipingyan.webp",
     desc: "肉燕皮爽滑，汤清味鲜，寓意平安的福州传统汤。",
     time: "60 分钟",
     difficulty: "中等",
@@ -222,7 +222,7 @@ window.RECIPES.min = [
     
     name: "炝蛤蜊",
     id: "min-zuojiang",
-    image: "assets/img/min-zuojiang.jpg",
+    image: "assets/img/min-zuojiang.webp",
     desc: "蛤蜊鲜嫩，芡汁滑润，福州酒席上的时令鲜味。",
     time: "25 分钟",
     difficulty: "简单",
@@ -252,7 +252,7 @@ window.RECIPES.min = [
     
     name: "鼎边糊",
     id: "min-dingbianhu",
-    image: "assets/img/min-dingbianhu.jpg",
+    image: "assets/img/min-dingbianhu.webp",
     desc: "米浆沿锅边烫成薄片，汤鲜糊滑，福州晨间风味。",
     time: "30 分钟",
     difficulty: "简单",
@@ -282,7 +282,7 @@ window.RECIPES.min = [
     
     name: "芝麻圆子",
     id: "min-zhiwanzi",
-    image: "assets/img/min-zhiwanzi.jpg",
+    image: "assets/img/min-zhiwanzi.webp",
     desc: "外糯里酥，芝麻香浓，酥甜宜人的闽式甜点。",
     time: "40 分钟",
     difficulty: "简单",

@@ -8,7 +8,7 @@ window.RECIPES.lu = [
     
     name: "糖醋鲤鱼",
     id: "lu-tangculiyu",
-    image: "assets/img/lu-tangculiyu.jpg",
+    image: "assets/img/lu-tangculiyu.webp",
     desc: "金鳞酥脆，酸甜适口，鲁菜宴席的经典开席大菜。",
     time: "40 分钟",
     difficulty: "中等",
@@ -40,7 +40,7 @@ window.RECIPES.lu = [
     
     name: "九转大肠",
     id: "lu-jiuzhuan",
-    image: "assets/img/lu-jiuzhuan.jpg",
+    image: "assets/img/lu-jiuzhuan.webp",
     desc: "肥肠软糯，咸甜酸辣香五味俱全，鲁菜名品。",
     time: "90 分钟",
     difficulty: "较难",
@@ -73,7 +73,7 @@ window.RECIPES.lu = [
     
     name: "葱烧海参",
     id: "lu-congshaohaishen",
-    image: "assets/img/lu-congshaohaishen.jpg",
+    image: "assets/img/lu-congshaohaishen.webp",
     desc: "海参软糯弹润，葱香浓郁，胶东名贵宴客硬菜。",
     time: "60 分钟",
     difficulty: "较难",
@@ -104,7 +104,7 @@ window.RECIPES.lu = [
     
     name: "锅塌豆腐",
     id: "lu-guotadoufu",
-    image: "assets/img/lu-guotadoufu.jpg",
+    image: "assets/img/lu-guotadoufu.webp",
     desc: "外酥里嫩，汤汁鲜香，鲁菜锅塌技法的代表菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -136,7 +136,7 @@ window.RECIPES.lu = [
     
     name: "油爆双脆",
     id: "lu-youbaoshuangcui",
-    image: "assets/img/lu-youbaoshuangcui.jpg",
+    image: "assets/img/lu-youbaoshuangcui.webp",
     desc: "鸡胗与肚尖入口爽脆，旺火快炒，考验火候的爆款菜。",
     time: "25 分钟",
     difficulty: "较难",
@@ -167,7 +167,7 @@ window.RECIPES.lu = [
     
     name: "四喜丸子",
     id: "lu-sixiwanzi",
-    image: "assets/img/lu-sixiwanzi.jpg",
+    image: "assets/img/lu-sixiwanzi.webp",
     desc: "个大肉圆，软糯咸香，寓意福禄寿喜的宴席吉祥菜。",
     time: "90 分钟",
     difficulty: "中等",
@@ -199,7 +199,7 @@ window.RECIPES.lu = [
     
     name: "爆炒腰花",
     id: "lu-baochaoyaohua",
-    image: "assets/img/lu-baochaoyaohua.jpg",
+    image: "assets/img/lu-baochaoyaohua.webp",
     desc: "腰花脆嫩无膻，酱香浓郁，鲁菜经典下饭菜。",
     time: "30 分钟",
     difficulty: "中等",
@@ -232,7 +232,7 @@ window.RECIPES.lu = [
     
     name: "糖醋里脊",
     id: "lu-tangculiji",
-    image: "assets/img/lu-tangculiji.jpg",
+    image: "assets/img/lu-tangculiji.webp",
     desc: "色泽金黄，外酥里嫩，酸甜开胃的北方家庭硬菜。",
     time: "30 分钟",
     difficulty: "简单",
@@ -263,7 +263,7 @@ window.RECIPES.lu = [
     
     name: "德州扒鸡",
     id: "lu-dezhoupaji",
-    image: "assets/img/lu-dezhoupaji.jpg",
+    image: "assets/img/lu-dezhoupaji.webp",
     desc: "五香脱骨，肉烂形整，一抖即散的德州名鸡。",
     time: "150 分钟",
     difficulty: "较难",
@@ -294,7 +294,7 @@ window.RECIPES.lu = [
     
     name: "红烧大虾",
     id: "lu-hongshaodaxia",
-    image: "assets/img/lu-hongshaodaxia.jpg",
+    image: "assets/img/lu-hongshaodaxia.webp",
     desc: "虾肉弹嫩，酱香红亮，胶东海鲜家常硬菜。",
     time: "25 分钟",
     difficulty: "简单",

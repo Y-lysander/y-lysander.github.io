@@ -8,7 +8,7 @@ window.RECIPES.yue = [
     
     name: "白切鸡",
     id: "yue-baiqieji",
-    image: "assets/img/yue-baiqieji.jpg",
+    image: "assets/img/yue-baiqieji.webp",
     desc: "皮爽肉滑，清淡鲜美，最能体现粤菜原味的功夫菜。",
     time: "60 分钟",
     difficulty: "中等",
@@ -37,7 +37,7 @@ window.RECIPES.yue = [
     
     name: "蜜汁叉烧",
     id: "yue-mizhicha",
-    image: "assets/img/yue-mizhicha.jpg",
+    image: "assets/img/yue-mizhicha.webp",
     desc: "蜜色油亮，甜咸焦香，广式烧腊的招牌门面。",
     time: "180 分钟",
     difficulty: "中等",
@@ -67,7 +67,7 @@ window.RECIPES.yue = [
     
     name: "清蒸鲈鱼",
     id: "yue-qingzhengluyu",
-    image: "assets/img/yue-qingzhengluyu.jpg",
+    image: "assets/img/yue-qingzhengluyu.webp",
     desc: "鱼肉嫩滑鲜美，豉油提鲜，广式蒸鱼的经典之作。",
     time: "30 分钟",
     difficulty: "简单",
@@ -95,7 +95,7 @@ window.RECIPES.yue = [
     
     name: "广式烧鹅",
     id: "yue-guangshaoe",
-    image: "assets/img/yue-guangshaoe.jpg",
+    image: "assets/img/yue-guangshaoe.webp",
     desc: "皮脆肉嫩，肥而不腻，岭南烧腊中的宴请头牌。",
     time: "200 分钟",
     difficulty: "较难",
@@ -125,7 +125,7 @@ window.RECIPES.yue = [
     
     name: "豉汁蒸排骨",
     id: "yue-chishengpaigu",
-    image: "assets/img/yue-chishengpaigu.jpg",
+    image: "assets/img/yue-chishengpaigu.webp",
     desc: "排骨嫩滑，豉香浓郁，粤式茶楼必点的蒸点。",
     time: "40 分钟",
     difficulty: "简单",
@@ -156,7 +156,7 @@ window.RECIPES.yue = [
     
     name: "干炒牛河",
     id: "yue-ganchaoni",
-    image: "assets/img/yue-ganchaoni.jpg",
+    image: "assets/img/yue-ganchaoni.webp",
     desc: "河粉干香弹滑，牛肉嫩滑，广式宵夜的灵魂代表。",
     time: "25 分钟",
     difficulty: "中等",
@@ -188,7 +188,7 @@ window.RECIPES.yue = [
     
     name: "滑蛋虾仁",
     id: "yue-huadanxia",
-    image: "assets/img/yue-huadanxia.jpg",
+    image: "assets/img/yue-huadanxia.webp",
     desc: "蛋滑虾爽，花一样的嫩蛋，广东家常席上佳肴。",
     time: "20 分钟",
     difficulty: "简单",
@@ -217,7 +217,7 @@ window.RECIPES.yue = [
     
     name: "蚝油生菜",
     id: "yue-haoyoushengcai",
-    image: "assets/img/yue-haoyoushengcai.jpg",
+    image: "assets/img/yue-haoyoushengcai.webp",
     desc: "生菜爽脆，蚝香浓郁，快手上桌的广式素菜。",
     time: "15 分钟",
     difficulty: "简单",
@@ -246,7 +246,7 @@ window.RECIPES.yue = [
     
     name: "咕噜肉",
     id: "yue-gulurou",
-    image: "assets/img/yue-gulurou.jpg",
+    image: "assets/img/yue-gulurou.webp",
     desc: "外酥里嫩，酸甜开胃，搭配彩椒洋葱的酸甜肉。",
     time: "35 分钟",
     difficulty: "中等",
@@ -278,7 +278,7 @@ window.RECIPES.yue = [
     
     name: "老火靓汤",
     id: "yue-laohuoliangtang",
-    image: "assets/img/yue-laohuoliangtang.jpg",
+    image: "assets/img/yue-laohuoliangtang.webp",
     desc: "文火慢煲，汤清味浓，滋补养人的广东家常汤品。",
     time: "180 分钟",
     difficulty: "简单",
