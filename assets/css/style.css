@@ -34,7 +34,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 
 body {
   margin: 0;
@@ -681,6 +681,8 @@ body {
 }
 
 .btn-fav.active { background: var(--accent); color: #fbe7c8; }
+/* 已收藏态：按钮为朱红，爱心用浅金米白以作区分 */
+.btn-fav.active .heart.filled path { fill: #fbe7c8; stroke: #fbe7c8; }
 
 .btn-fav:hover { box-shadow: 0 4px 18px rgba(196,69,58,.4); }
 
@@ -858,22 +860,52 @@ body {
   margin-top: 8px;
 }
 
-/* 底部菜系 dock */
+/* 底部全局导航 dock */
 .cuisine-dock {
   position: fixed;
   left: 50%;
   bottom: 18px;
   transform: translateX(-50%);
   width: min(760px, 94vw);
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 6px;
+  padding: 6px;
   background: rgba(18,26,41,.94);
   backdrop-filter: blur(10px);
   border: 1px solid var(--gline-soft);
   box-shadow: 0 10px 36px rgba(5,9,16,.55), inset 0 0 22px rgba(230,198,122,.05);
   border-radius: 40px;
   z-index: 50;
+  transition: transform .38s cubic-bezier(.65,.05,.36,1), opacity .3s;
+}
+
+/* 桌面端首页隐藏：从下方飞出，其余界面飞入 */
+.cuisine-dock.dock-hidden {
+  transform: translateX(-50%) translateY(180%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 桌面端：八大菜系；移动端：简要版（首页/菜系/搜索/收藏） */
+.dock-group { display: grid; }
+.dock-desktop { grid-template-columns: repeat(8, 1fr); gap: 4px; }
+.dock-mobile { display: none; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+
+/* 导航气泡：吸附当前项，两侧圆弧胶囊形（保持原始外观） */
+.dock-bubble {
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  left: 0;
+  width: 0;
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(251,231,200,.28), 0 6px 18px rgba(156,46,36,.38);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition:
+    left .35s cubic-bezier(.65,.05,.36,1),
+    width .35s cubic-bezier(.65,.05,.36,1),
+    opacity .22s;
 }
 
 .dock-item {
@@ -892,6 +924,7 @@ body {
   gap: 2px;
   transition: background .25s, color .25s;
   position: relative;
+  z-index: 1;
 }
 
 .dock-item small {
@@ -901,10 +934,29 @@ body {
   letter-spacing: 1px;
 }
 
-.dock-item:hover { background: rgba(255,255,255,.08); }
+.dock-item:not(.active):hover { background: rgba(255,255,255,.08); }
 
-.dock-item.active { background: var(--accent); color: #fff; }
+/* 激活项背景由导航气泡提供 */
+.dock-item.active { background: transparent; color: #fff; }
 .dock-item.active small { color: #fbe7c8; }
+
+/* 移动端简要导航（首页/菜系/搜索/收藏） */
+.dock-mobile .dock-item {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  gap: 4px;
+  padding: 9px 4px 8px;
+  color: var(--ink-soft);
+}
+.dock-mobile .dock-item svg { display: block; flex: none; }
+.dock-mobile .dock-item span { line-height: 1.1; }
+.dock-mobile .dock-item.active { color: #fff; }
+
+@media (max-width: 640px) {
+  .dock-desktop { display: none; }
+  .dock-mobile { display: grid; }
+}
 
 /* 返回按钮 */
 .btn-back {
@@ -994,6 +1046,212 @@ body {
 }
 
 .dock-connect p { margin: 0; }
+
+/* ============ 移动端首页：封面 + 收藏中的菜系 ============ */
+.mobile-home { padding: 0 0 12px; }
+
+/* ============ 移动端搜索页（仅搜索框 + 下方结果） ============ */
+.search-page { padding: 4px 0 12px; }
+
+.search-hero { text-align: center; margin: 8px 0 20px; }
+.search-hero h1 {
+  margin: 4px 0 18px;
+  font-family: var(--serif);
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+
+.m-search-box {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel-deep);
+  border: 1px solid var(--gline);
+  box-shadow: inset 0 0 20px rgba(230,198,122,.06), var(--shadow);
+  border-radius: 999px;
+  padding: 0 18px;
+  color: var(--ink-soft);
+  transition: border-color .3s, box-shadow .3s;
+}
+.m-search-box:focus-within {
+  border-color: var(--gline-strong);
+  box-shadow: inset 0 0 20px rgba(230,198,122,.08), 0 0 0 3px rgba(230,198,122,.16), var(--shadow);
+}
+.m-search-box input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+  padding: 12px 0;
+}
+
+.search-results { margin-top: 4px; }
+
+.search-hint {
+  text-align: center;
+  color: var(--ink-faint);
+  padding: 46px 16px;
+}
+.search-hint .hint-seal {
+  font-family: var(--serif);
+  font-size: 52px;
+  color: var(--line-strong);
+  margin-bottom: 10px;
+}
+.search-hint p { margin: 0; font-size: 13.5px; letter-spacing: 1px; }
+
+/* 移动端隐藏顶部全局搜索框（搜索移入专属「搜索」标签） */
+@media (max-width: 640px) {
+  .search-wrap { display: none; }
+
+  /* 顶部栏不换行：右边“我的收藏”文字保持单行 */
+  .header { flex-wrap: nowrap; }
+  .brand { min-width: 0; }
+  .brand-text { min-width: 0; }
+  .brand-text strong,
+  .brand-text small { white-space: nowrap; }
+  .header-actions { flex: none; }
+  .header-actions .icon-btn { white-space: nowrap; }
+  .header-actions .icon-btn > span { white-space: nowrap; }
+}
+
+/* 封面（藏青底 · 佳肴衬图 · 描金点缀） */
+.home-cover {
+  position: relative;
+  min-height: 236px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--gline-soft);
+  box-shadow: inset 0 0 0 1px var(--gline-soft), var(--shadow);
+  isolation: isolate;
+}
+.home-cover .cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 底部深色渐变保证文字可读 */
+.home-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(360px 200px at 12% 8%, rgba(230,198,122,.20), transparent 60%),
+    linear-gradient(180deg, rgba(18,26,41,.12) 0%, rgba(15,21,33,.90) 80%);
+}
+/* 右上点缀佳肴圆章 */
+.home-cover .cover-dish {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,.62);
+  box-shadow: 0 10px 26px rgba(5,9,16,.5);
+  transform: rotate(6deg);
+  opacity: .94;
+}
+.cover-body {
+  position: relative;
+  z-index: 1;
+  padding: 26px 22px 22px;
+  color: var(--ink);
+}
+.cover-kicker {
+  display: block;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+.cover-seal {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin: 13px 0 9px;
+  background: var(--accent);
+  color: #fdf3e3;
+  font-family: var(--serif);
+  font-size: 28px;
+  border-radius: var(--radius) 50% var(--radius) 50%;
+  box-shadow: inset 0 0 0 2px rgba(251,231,200,.42), 0 0 0 1px rgba(230,198,122,.42);
+}
+.cover-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: 9px;
+  font-weight: 700;
+  color: #fbf3e1;
+}
+.cover-sub {
+  margin: 7px 0 0;
+  color: rgba(243,234,214,.82);
+  font-size: 12.5px;
+  letter-spacing: 3px;
+}
+.cover-divider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+}
+.cover-divider .line {
+  height: 1px;
+  flex: 0 0 42px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.cover-divider .line:last-child { transform: scaleX(-1); }
+.cover-divider .gem {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  background: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+/* 收藏中的菜系 */
+.fav-cuisines { margin-top: 26px; }
+.mobile-sect-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 2px 14px;
+}
+.mobile-sect-head h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.mobile-sect-head .sect-sub { color: var(--ink-faint); font-size: 12px; letter-spacing: 1px; }
+
+.fav-empty { text-align: center; color: var(--ink-soft); padding: 30px 10px 6px; }
+.fav-empty .empty-seal {
+  font-family: var(--serif);
+  font-size: 54px;
+  color: var(--line-strong);
+  margin-bottom: 8px;
+}
+.fav-empty p { margin: 0 0 14px; font-size: 13.5px; line-height: 1.8; }
+.fav-empty .btn-back { margin-left: auto; margin-right: auto; }
 
 /* ============ 宫廷重彩 · 全局装饰 ============ */
 /* 卡片内描金细边（双线金框，富丽质感） */

@@ -18,6 +18,8 @@ const CUISINES = [
 
 const CUISINE_MAP = Object.fromEntries(CUISINES.map(c => [c.key, c]));
 const FAV_KEY = "bazhenlu:favorites";
+// 移动端简要 nav 断点（与 CSS `@media (max-width:640px)` 保持一致）
+const MOBILE_Q = window.matchMedia("(max-width: 640px)");
 
 /* ---------- 工具 ---------- */
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -53,6 +55,11 @@ function updateFavBadge() {
   badge.textContent = n;
   badge.hidden = n === 0;
 }
+/* 收藏涉及到的菜系（按 CUISINES 顺序） */
+function favoriteCuisines() {
+  const fav = new Set(getFavorites());
+  return CUISINES.filter(c => allRecipes().some(r => r.cuisine === c.key && fav.has(r.id)));
+}
 
 /* ---------- 图标 ---------- */
 const HEART_SVG = (filled) =>
@@ -60,6 +67,17 @@ const HEART_SVG = (filled) =>
      <path d="M12 21s-7.5-4.7-10-9C.6 8.3 2.5 4 6.3 4c2.4 0 3.8 1.2 5.7 3.4C13.9 5.2 15.3 4 17.7 4c3.8 0 5.7 4.3 3.7 8-2.5 4.3-9.4 9-9.4 9z"
        fill="${filled ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
    </svg>`;
+
+/* 底部导航（移动端简要版）线性图标 */
+const TAB_ICONS = {
+  home: `<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg>`,
+  cuisine: `<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true">
+    <rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/>
+    <rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>`,
+  search: `<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="20" y2="20"/></svg>`
+};
 
 /* 祥云纹（中国元素点缀，inline SVG 便于铺色/镜像） */
 const SWIRL_SVG = `
@@ -97,47 +115,161 @@ function recipeTileHTML(r, { showCuisine = true } = {}) {
 function renderHome() {
   patchDockActive(null);
   const hasSearch = $("#searchInput").value.trim();
-  let inner;
   if (hasSearch) {
-    inner = renderSearch(hasSearch);
-  } else {
-    const tiles = CUISINES.map(c => {
-      const count = (window.RECIPES[c.key] || []).length;
-      return `
-        <button class="cuisine-item" data-route="/cuisine/${c.key}" style="--cuisine-color:${c.color}">
-          <span class="cuisine-seal">${c.name[0]}</span>
-          <h3>${c.name}</h3>
-          <span class="en">${c.en}</span>
-          <span class="count">${count} 道佳肴</span>
-        </button>`;
-    }).join("");
-    inner = `
-      <div class="view home">
-        ${(() => {
-          const deco = ["chuan-gongbaojiding", "zhe-dongporou", "su-songshuguaiyu", "min-fotiaoqiang"]
-            .map(id => getRecipe(id))
-            .filter(Boolean)
-            .map((r, i) => `<img class="deco-dish d${i + 1}" src="${r.image}" alt="" loading="lazy">`)
-            .join("");
-          return `<div class="home-deco" aria-hidden="true">${deco}</div>`;
-        })()}
-        <div class="section-head">
-          <div class="auspice" aria-hidden="true">
-            <span class="swirl">${SWIRL_SVG}</span>
-            <span class="kicker">华夏百味 · 一系一味</span>
-            <span class="swirl mirror">${SWIRL_SVG}</span>
-          </div>
-          <p class="lead">山川风物，尽在一方烟火</p>
-          <div class="rule"><span class="gem"></span></div>
-        </div>
-        <div class="cuisine-strip">${tiles}</div>
-        <p class="footer-note">选一道称心的菜，为今日添一味温暖</p>
-      </div>`;
+    $("#viewRoot").innerHTML = renderSearch(hasSearch);
+    return;
   }
+  // 移动端首页：封面 + 收藏中的菜系；其余屏幕：原有八大菜系横幅首页
+  const inner = MOBILE_Q.matches ? renderMobileHome() : renderDesktopHome();
   $("#viewRoot").innerHTML = inner;
 }
 
-/* ---------- 视图：菜系页 ---------- */
+/* 桌面/宽屏首页（原有构图，含四角点缀） */
+function renderDesktopHome() {
+  const tiles = CUISINES.map(c => {
+    const count = (window.RECIPES[c.key] || []).length;
+    return `
+      <button class="cuisine-item" data-route="/cuisine/${c.key}" style="--cuisine-color:${c.color}">
+        <span class="cuisine-seal">${c.name[0]}</span>
+        <h3>${c.name}</h3>
+        <span class="en">${c.en}</span>
+        <span class="count">${count} 道佳肴</span>
+      </button>`;
+  }).join("");
+  return `
+    <div class="view home">
+      ${(() => {
+        const deco = ["chuan-gongbaojiding", "zhe-dongporou", "su-songshuguaiyu", "min-fotiaoqiang"]
+          .map(id => getRecipe(id))
+          .filter(Boolean)
+          .map((r, i) => `<img class="deco-dish d${i + 1}" src="${r.image}" alt="" loading="lazy">`)
+          .join("");
+        return `<div class="home-deco" aria-hidden="true">${deco}</div>`;
+      })()}
+      <div class="section-head">
+        <div class="auspice" aria-hidden="true">
+          <span class="swirl">${SWIRL_SVG}</span>
+          <span class="kicker">华夏百味 · 一系一味</span>
+          <span class="swirl mirror">${SWIRL_SVG}</span>
+        </div>
+        <p class="lead">山川风物，尽在一方烟火</p>
+        <div class="rule"><span class="gem"></span></div>
+      </div>
+      <div class="cuisine-strip">${tiles}</div>
+      <p class="footer-note">选一道称心的菜，为今日添一味温暖</p>
+    </div>`;
+}
+
+/* 移动端首页：封面 + 收藏中的菜系 */
+function renderMobileHome() {
+  const mainDish = getRecipe("su-songshuguaiyu");
+  const sideDish = getRecipe("chuan-gongbaojiding");
+  const favs = getFavorites();
+  const favCuisines = favoriteCuisines();
+
+  const tiles = favCuisines.map(c => {
+    const count = allRecipes().filter(r => r.cuisine === c.key && favs.includes(r.id)).length;
+    return `
+      <button class="cuisine-item" data-route="/cuisine/${c.key}/fav" style="--cuisine-color:${c.color}">
+        <span class="cuisine-seal">${c.name[0]}</span>
+        <h3>${c.name}</h3>
+        <span class="en">${c.en}</span>
+        <span class="count">已藏 ${count} 道</span>
+      </button>`;
+  }).join("");
+
+  const favSection = favCuisines.length ? `
+    <section class="fav-cuisines">
+      <div class="mobile-sect-head">
+        <h3>收藏中的菜系</h3>
+        <span class="sect-sub">共收藏 ${favs.length} 道佳肴</span>
+      </div>
+      <div class="cuisine-strip">${tiles}</div>
+    </section>` : `
+    <section class="fav-cuisines">
+      <div class="mobile-sect-head"><h3>收藏中的菜系</h3></div>
+      <div class="fav-empty">
+        <div class="empty-seal">藏</div>
+        <p>还没有收藏，去菜系里寻一道合口味的菜，点击 ♥ 收好。</p>
+        <button class="btn-back" data-route="/cuisine">浏览八大菜系</button>
+      </div>
+    </section>`;
+
+  return `
+    <div class="view mobile-home">
+      <section class="home-cover">
+        ${mainDish ? `<img class="cover-bg" src="${mainDish.image}" alt="" loading="lazy">` : ""}
+        ${sideDish ? `<img class="cover-dish" src="${sideDish.image}" alt="" loading="lazy">` : ""}
+        <div class="cover-body">
+          <span class="cover-kicker">山之味 · 海之鲜 · 一器一味</span>
+          <div class="cover-seal">八</div>
+          <h2 class="cover-title">八珍录</h2>
+          <p class="cover-sub">中国八大菜系 · 食谱典藏</p>
+          <div class="cover-divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+        </div>
+      </section>
+      ${favSection}
+      <p class="footer-note">山河风味，逐一收藏</p>
+    </div>`;
+}
+
+/* 视图：八大菜系索引（移动端「菜系」标签） */
+function renderCuisineIndex() {
+  const tiles = CUISINES.map(c => {
+    const count = (window.RECIPES[c.key] || []).length;
+    return `
+      <button class="cuisine-item" data-route="/cuisine/${c.key}" style="--cuisine-color:${c.color}">
+        <span class="cuisine-seal">${c.name[0]}</span>
+        <h3>${c.name}</h3>
+        <span class="en">${c.en}</span>
+        <span class="count">${count} 道佳肴</span>
+      </button>`;
+  }).join("");
+  $("#viewRoot").innerHTML = `
+    <div class="view cuisine-index">
+      <div class="section-head">
+        <span class="kicker">The Eight Schools</span>
+        <h1>八大菜系</h1>
+        <p class="lead">一方水土，养一方味</p>
+        <div class="rule"><span class="gem"></span></div>
+      </div>
+      <div class="cuisine-strip">${tiles}</div>
+      <p class="footer-note">共 ${allRecipes().length} 道佳肴，静待品尝</p>
+    </div>`;
+  patchDockActive(null);
+}
+
+/* 视图：某菜系下「我收藏的菜」（移动端首页菜系入口） */
+function renderFavCuisine(key) {
+  const c = CUISINE_MAP[key];
+  if (!c) { renderHome(); return; }
+  const favs = new Set(getFavorites());
+  const items = (window.RECIPES[key] || []).filter(r => favs.has(r.id));
+  const body = items.length ? `
+    <div class="recipe-grid">${items.map(r => recipeTileHTML({ ...r, cuisine: key }, { showCuisine: false })).join("")}</div>
+    <p class="footer-note">已收藏 ${items.length} 道${c.name}佳肴</p>` : `
+    <div class="empty">
+      <div class="empty-seal">藏</div>
+      <h3>此菜系还未收藏</h3>
+      <p>去${c.name}里挑一道合口味的菜，点击 ♥ 收藏。</p>
+      <button class="btn-back" data-route="/cuisine/${key}" style="margin:12px auto 0;display:block">浏览${c.name}菜谱</button>
+    </div>`;
+  $("#viewRoot").innerHTML = `
+    <div class="view">
+      <button class="btn-back" data-route="/home">← 返回首页</button>
+      <div class="cuisine-hero" style="--cuisine-color:${c.color}">
+        <span class="seal-lg">${c.name[0]}</span>
+        <div>
+          <h1>${c.name} · 我的收藏</h1>
+          <p class="motto">${c.motto}</p>
+        </div>
+      </div>
+      ${body}
+    </div>`;
+  patchDockActive(key);
+}
+
+/* 视图：菜系页 */
 function renderCuisine(key) {
   const c = CUISINE_MAP[key];
   if (!c) { renderHome(); return; }
@@ -199,7 +331,7 @@ function renderRecipe(id) {
             <span class="m"><b>${esc(r.serves)}</b><span>分量</span></span>
           </div>
           <button class="btn-fav${fav ? " active" : ""}" data-fav="${r.id}">
-            ${HEART_SVG(fav)} ${fav ? "已收藏" : "收藏菜谱"}
+            ${HEART_SVG(fav)}<span>${fav ? "已收藏" : "收藏菜谱"}</span>
           </button>
         </div>
       </div>
@@ -256,17 +388,24 @@ function renderFavorites() {
   patchDockActive(null);
 }
 
-/* ---------- 搜索（返回结构化 HTML，供 renderHome 使用） ---------- */
+/* ---------- 搜索（返回结构化 HTML） ---------- */
 function renderSearch(q) {
   const kw = q.trim().toLowerCase();
   const results = allRecipes().filter(r => r.name.toLowerCase().includes(kw));
+  return `
+    <div class="section-head">
+      <span class="kicker">Search</span>
+      <h1>“${esc(q)}”</h1>
+      <p>共找到 ${results.length} 道菜谱</p>
+      <div class="rule"></div>
+    </div>
+    ${renderSearchResults(kw, results)}`;
+}
+
+/* 搜索结果的正文部分（菜系分组 / 空态），可被首页搜索与移动端搜索页复用 */
+function renderSearchResults(kw, results) {
   if (!results.length) {
     return `
-      <div class="section-head">
-        <span class="kicker">Search</span>
-        <h1>“${esc(q)}”</h1>
-        <div class="rule"></div>
-      </div>
       <div class="empty">
         <div class="empty-seal">寻</div>
         <h3>未能找到相关菜谱</h3>
@@ -285,14 +424,58 @@ function renderSearch(q) {
         <div class="recipe-grid">${hits.map(r => recipeTileHTML(r, { showCuisine: false })).join("")}</div>
       </div>`;
   }).join("");
-  return `
-    <div class="section-head">
-      <span class="kicker">Search</span>
-      <h1>“${esc(q)}”</h1>
-      <p>共找到 ${results.length} 道菜谱</p>
-      <div class="rule"></div>
-    </div>
-    ${groups}`;
+  return groups;
+}
+
+/* 视图：移动端搜索页（仅搜索框 + 下方结果） */
+function renderMobileSearch() {
+  $("#viewRoot").innerHTML = `
+    <div class="view search-page">
+      <div class="search-hero">
+        <span class="kicker">Search</span>
+        <h1>搜寻珍味</h1>
+        <div class="m-search-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="16" y1="16" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input id="mobileSearchInput" placeholder="搜索菜名，如「宫保鸡丁」「鱼香肉丝」…" autocomplete="off">
+          <button class="clear-btn" id="mobileSearchClear" aria-label="清空" hidden>×</button>
+        </div>
+      </div>
+      <div class="search-results" id="mobileSearchResults"></div>
+    </div>`;
+  patchDockActive(null);
+  const input = $("#mobileSearchInput");
+  const clearBtn = $("#mobileSearchClear");
+  const rerender = () => {
+    const v = input.value;
+    clearBtn.hidden = !v;
+    mobileSearchResults(v);
+  };
+  input.addEventListener("input", rerender);
+  clearBtn.addEventListener("click", () => {
+    input.value = "";
+    rerender();
+    input.focus();
+  });
+  requestAnimationFrame(() => input.focus());
+}
+function mobileSearchResults(q) {
+  const box = $("#mobileSearchResults");
+  if (!box) return;
+  const kw = q.trim();
+  if (!kw) {
+    box.innerHTML = `
+      <div class="search-hint">
+        <div class="hint-seal">寻</div>
+        <p>输入一道菜名，即刻开启寻味之旅</p>
+      </div>`;
+    return;
+  }
+  const lower = kw.toLowerCase();
+  const matches = allRecipes().filter(r => r.name.toLowerCase().includes(lower));
+  box.innerHTML = renderSearchResults(lower, matches);
 }
 
 /* ---------- 路由 ---------- */
@@ -303,22 +486,102 @@ function navigate() {
   const route = parseRoute();
   const parts = route.split("/").filter(Boolean);
   if (parts[0] === "recipe" && parts[1]) renderRecipe(decodeURIComponent(parts[1]));
+  else if (parts[0] === "cuisine" && parts[1] && parts[2] === "fav") renderFavCuisine(parts[1]);
   else if (parts[0] === "cuisine" && parts[1]) renderCuisine(parts[1]);
+  else if (parts[0] === "cuisine") { if (MOBILE_Q.matches) renderCuisineIndex(); else renderHome(); }
+  else if (parts[0] === "search") { if (MOBILE_Q.matches) renderMobileSearch(); else renderHome(); }
   else if (parts[0] === "favorites") renderFavorites();
   else renderHome();
+  updateDockVisibility(route);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-/* ---------- 菜系底栏 ---------- */
+/* 底部导航可见性：桌面端首页/菜品界面隐藏，其余界面从下方飞入；移动端恒显示 */
+function updateDockVisibility(route) {
+  const dock = $("#cuisineDock");
+  if (MOBILE_Q.matches) { dock.classList.remove("dock-hidden"); return; }
+  const homeOnly = !route || route === "/home" || route === "/cuisine" || route === "/search" || route.startsWith("/recipe/");
+  dock.classList.toggle("dock-hidden", homeOnly);
+}
+
+/* ---------- 底部全局导航 ---------- */
+const BUBBLE_INSET = 7;
+let lastBubbleRect = null;
+
 function buildDock() {
-  $("#cuisineDock").innerHTML = CUISINES.map(c =>
+  const dock = $("#cuisineDock");
+  const desktopItems = CUISINES.map(c =>
     `<button class="dock-item" data-route="/cuisine/${c.key}">${c.name}<small>${c.en}</small></button>`
   ).join("");
+  const mobileItems = [
+    { route: "/home",      label: "首页", icon: TAB_ICONS.home },
+    { route: "/cuisine",   label: "菜系", icon: TAB_ICONS.cuisine },
+    { route: "/search",    label: "搜索", icon: TAB_ICONS.search },
+    { route: "/favorites", label: "收藏", icon: HEART_SVG(false) }
+  ].map(t => `<button class="dock-item" data-route="${t.route}">${t.icon}<span>${t.label}</span></button>`).join("");
+  dock.innerHTML = `
+    <div class="dock-bubble" id="dockBubble" aria-hidden="true"></div>
+    <div class="dock-group dock-desktop">${desktopItems}</div>
+    <div class="dock-group dock-mobile">${mobileItems}</div>`;
 }
+
+/* 气泡吸附到当前可见组中激活的导航项；跨项切换时以慢-快-慢曲线滑动 */
+function moveDockBubble(instant = false) {
+  const dock = $("#cuisineDock");
+  const bubble = $("#dockBubble");
+  if (!dock || !bubble) return;
+  const active = [...dock.querySelectorAll(".dock-item.active")].find(it => it.offsetParent !== null);
+  if (active) {
+    const dockBox = dock.getBoundingClientRect();
+    const box = active.getBoundingClientRect();
+    // 四周对称内嵌：气泡圆端与底栏弧线自然贴合，不做边缘拉长
+    const left = box.left - dockBox.left + BUBBLE_INSET;
+    const width = box.width - BUBBLE_INSET * 2;
+    if (instant) bubble.style.transition = "none";
+    bubble.style.left = left + "px";
+    bubble.style.width = width + "px";
+    bubble.style.opacity = "1";
+    lastBubbleRect = { left, width };
+    if (instant) { void bubble.offsetWidth; bubble.style.transition = ""; }
+  } else if (lastBubbleRect) {
+    // 无激活项：原地淡出，保留上一位置，便于再次进入时从原位滑动
+    bubble.style.opacity = "0";
+  } else {
+    // 首次无激活项：吸附到可见组首项位置（隐藏），后续切换从该处平滑滑动
+    const first = [...dock.querySelectorAll(".dock-item")].find(it => it.offsetParent !== null);
+    if (first) {
+      const dockBox = dock.getBoundingClientRect();
+      const box = first.getBoundingClientRect();
+      const left = box.left - dockBox.left + BUBBLE_INSET;
+      const width = box.width - BUBBLE_INSET * 2;
+      bubble.style.transition = "none";
+      bubble.style.left = left + "px";
+      bubble.style.width = width + "px";
+      bubble.style.opacity = "0";
+      lastBubbleRect = { left, width };
+      void bubble.offsetWidth;
+      bubble.style.transition = "";
+    }
+  }
+}
+
 function patchDockActive(activeKey) {
+  const route = parseRoute();
   document.querySelectorAll(".dock-item").forEach(b => {
-    b.classList.toggle("active", b.dataset.route === `/cuisine/${activeKey}`);
+    const r = b.dataset.route;
+    let active;
+    if (b.closest(".dock-desktop")) {
+      active = r === `/cuisine/${activeKey}`;
+    } else {
+      active =
+        r === "/home"      ? (route === "/home") :
+        r === "/cuisine"   ? (route.startsWith("/cuisine") || route.startsWith("/recipe")) :
+        r === "/search"    ? (route === "/search") :
+        r === "/favorites" ? (route === "/favorites") : false;
+    }
+    b.classList.toggle("active", active);
   });
+  moveDockBubble();
 }
 
 /* ---------- 事件 ---------- */
@@ -326,7 +589,20 @@ function bindEvents() {
   document.body.addEventListener("click", (e) => {
     // 路由跳转
     const navEl = e.target.closest("[data-route]");
-    if (navEl) { location.hash = navEl.dataset.route; return; }
+    if (navEl) {
+      const route = navEl.dataset.route;
+      if (route === parseRoute()) {
+        // 同路由点击：搜索态下点“首页”清空搜索，回到纯净首页
+        if (route === "/home" && $("#searchInput").value.trim()) {
+          $("#searchInput").value = "";
+          $("#clearSearch").hidden = true;
+          renderHome();
+        }
+        return;
+      }
+      location.hash = route;
+      return;
+    }
 
     // 收藏切换
     const favBtn = e.target.closest("[data-fav]");
@@ -339,8 +615,8 @@ function bindEvents() {
       if (heartSvg) heartSvg.classList.toggle("filled", active);
       if (favBtn.classList.contains("btn-fav")) {
         favBtn.classList.toggle("active", active);
-        const textNode = [...favBtn.childNodes].find(n => n.nodeType === 3);
-        if (textNode) textNode.textContent = active ? " 已收藏" : " 收藏菜谱";
+        const lbl = favBtn.querySelector("span");
+        if (lbl) lbl.textContent = active ? "已收藏" : "收藏菜谱";
       }
       // 收藏页删除即淡出重渲
       if (parseRoute() === "/favorites" && !active) {
@@ -395,5 +671,11 @@ function bindEvents() {
   updateFavBadge();
   bindEvents();
   window.addEventListener("hashchange", navigate);
+  // 视口跨断点（桌面/移动切换）时即时重排气泡位置，避免拉伸动画
+  let dockResizeT;
+  window.addEventListener("resize", () => {
+    clearTimeout(dockResizeT);
+    dockResizeT = setTimeout(() => { moveDockBubble(true); updateDockVisibility(parseRoute()); }, 80);
+  });
   navigate();
 })();
