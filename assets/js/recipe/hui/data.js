@@ -321,5 +321,64 @@ window.RECIPES.hui = [
       "大火收汁，加盐与红椒块翻匀即可。"
     ],
     tips: "毛豆后下保持清甜翠绿，鸡肉酥香入味。"
+  },
+  {
+    id: "hui-wenzhengshansun",
+    name: "问政山笋",
+    image: "assets/img/hui-wenzhengshansun.webp",
+    desc: "山笋鲜嫩无筋，春意满满，清淡咸鲜，尽显徽菜本味。",
+    time: "30 分钟",
+    difficulty: "简单",
+    serves: "3 人",
+    ingredients: [
+      { name: "冬笋", amount: 500, unit: "克" },
+      { name: "金华火腿", amount: 60, unit: "克" },
+      { name: "姜", amount: 10, unit: "克" },
+      { name: "葱花", amount: "适量", unit: "" }
+    ],
+    seasonings: [
+      { name: "高汤", amount: 500, unit: "毫升" },
+      { name: "盐", amount: 3, unit: "克" },
+      { name: "食用油", amount: 2, unit: "汤匙" }
+    ],
+    steps: [
+      "冬笋去壳切滚刀块，冷水入锅焯去涩味捞出。",
+      "油锅爆香姜片，下笋块翻炒，加入火腿片与高汤。",
+      "小火焖煮 20 分钟至笋酥入味，加盐调味。",
+      "大火收汁，撒葱花出锅。"
+    ],
+    tips: "选嫩笋是关键，焯水去涩后再焖，才能鲜甜不麻舌。"
+  },
+  {
+    id: "hui-sunganshaorou",
+    name: "笋干烧肉",
+    image: "assets/img/hui-sunganshaorou.webp",
+    desc: "笋干吸饱肉汁越嚼越香，五花肉红亮软糯，咸鲜厚重。",
+    time: "90 分钟",
+    difficulty: "中等",
+    serves: "4 人",
+    ingredients: [
+      { name: "带皮五花肉", amount: 600, unit: "克" },
+      { name: "笋干", amount: 150, unit: "克" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "葱", amount: 2, unit: "根" },
+      { name: "蒜", amount: 4, unit: "瓣" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 3, unit: "汤匙" },
+      { name: "老抽", amount: 1, unit: "汤匙" },
+      { name: "料酒", amount: 2, unit: "汤匙" },
+      { name: "冰糖", amount: 30, unit: "克" },
+      { name: "八角", amount: 2, unit: "个" },
+      { name: "盐", amount: 2, unit: "克" },
+      { name: "食用油", amount: 2, unit: "汤匙" }
+    ],
+    steps: [
+      "笋干温水泡发、洗净切段；五花肉切方块，冷水下锅焯水捞出。",
+      "热锅少油炒糖色，下五花肉翻炒裹上糖色。",
+      "加姜葱蒜、八角、生抽、老抽、料酒炒香，倒入笋干翻匀。",
+      "加水没过肉，转小火焖 60 分钟至肉酥，收汁加盐调味。"
+    ],
+    tips: "炒糖色用小火防糊；焖至汁浓肉酥，笋干吸足肉汁最香。"
   }
 ];

@@ -302,5 +302,66 @@ window.RECIPES.yue = [
       "喝前加盐调味即可。"
     ],
     tips: "加足水量一次煲足、中途不揭盖，汤才醇厚。"
+  },
+  {
+    id: "yue-baizhuoxia",
+    name: "白灼虾",
+    image: "assets/img/yue-baizhuoxia.webp",
+    desc: "只只饱满弹嫩，清甜本味，蘸汁提鲜，极简见粤菜之妙。",
+    time: "15 分钟",
+    difficulty: "简单",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "鲜基围虾", amount: 500, unit: "克" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "葱", amount: 2, unit: "根" },
+      { name: "蒜", amount: 2, unit: "瓣" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 3, unit: "汤匙" },
+      { name: "蒸鱼豉油", amount: 1, unit: "汤匙" },
+      { name: "白糖", amount: 1, unit: "茶匙" },
+      { name: "香油", amount: 1, unit: "茶匙" },
+      { name: "食用油", amount: 1, unit: "汤匙" }
+    ],
+    steps: [
+      "鲜虾剪去须脚，挑去虾线，冲洗沥干。",
+      "锅中水加姜片、葱结烧开，下虾煮至变色卷曲约 90 秒即捞出。",
+      "姜蒜切末，与生抽、蒸鱼豉油、白糖、香油调成蘸汁，淋热油激香。",
+      "虾摆盘，蘸汁食用。"
+    ],
+    tips: "大火快煮断生即捞，过久则虾肉变老发柴。"
+  },
+  {
+    id: "yue-heyezhengji",
+    name: "荷叶蒸鸡",
+    image: "assets/img/yue-heyezhengji.webp",
+    desc: "荷叶清香渗透鸡肉，滑嫩多汁，冬菇红枣相佐，荤素皆宜。",
+    time: "45 分钟",
+    difficulty: "中等",
+    serves: "3 人",
+    ingredients: [
+      { name: "三黄鸡", amount: 600, unit: "克（半只）" },
+      { name: "干荷叶", amount: 1, unit: "张" },
+      { name: "干香菇", amount: 4, unit: "朵" },
+      { name: "红枣", amount: 6, unit: "颗" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "葱", amount: 2, unit: "根" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "蚝油", amount: 1, unit: "汤匙" },
+      { name: "料酒", amount: 1, unit: "汤匙" },
+      { name: "淀粉", amount: 1, unit: "汤匙" },
+      { name: "盐", amount: 3, unit: "克" },
+      { name: "香油", amount: 1, unit: "茶匙" }
+    ],
+    steps: [
+      "干荷叶浸软；香菇泡发切片，红枣去核，姜切丝。",
+      "鸡斩块，加生抽、蚝油、料酒、盐、淀粉、姜丝抓匀腌 20 分钟。",
+      "拌入香菇片、红枣，用荷叶垫底包裹鸡块。",
+      "水开上锅大火蒸 25 分钟，开盖撒葱花、淋香油。"
+    ],
+    tips: "荷叶浸软后修去硬梗，成品更易揭开且香气均匀。"
   }
 ];

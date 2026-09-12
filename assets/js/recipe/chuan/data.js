@@ -340,5 +340,70 @@ window.RECIPES.chuan = [
       "撒蒜末、干辣椒段、花椒，淋热油激香即成。"
     ],
     tips: "肉片要切得薄并逐片下锅拨散，才能嫩而不老。"
+  },
+  {
+    id: "chuan-shuzhuyu",
+    name: "水煮鱼",
+    image: "assets/img/chuan-shuzhuyu.webp",
+    desc: "鱼片嫩滑，麻香浓烈，红汤滚沸，一盆麻辣鲜香慰藉人心。",
+    time: "30 分钟",
+    difficulty: "中等",
+    serves: "3-4 人",
+    ingredients: [
+      { name: "草鱼", amount: 1, unit: "条（约800克）" },
+      { name: "豆芽", amount: 200, unit: "克" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "蒜", amount: 4, unit: "瓣" },
+      { name: "葱花", amount: "适量", unit: "" }
+    ],
+    seasonings: [
+      { name: "郫县豆瓣酱", amount: 1.5, unit: "汤匙" },
+      { name: "干辣椒", amount: 15, unit: "克" },
+      { name: "花椒", amount: 8, unit: "克" },
+      { name: "辣椒面", amount: 1, unit: "茶匙" },
+      { name: "盐", amount: 4, unit: "克" },
+      { name: "淀粉", amount: 1.5, unit: "汤匙" },
+      { name: "料酒", amount: 2, unit: "汤匙" },
+      { name: "食用油", amount: 300, unit: "毫升" }
+    ],
+    steps: [
+      "草鱼去骨片成薄片，加盐、料酒、淀粉抓匀腌 10 分钟；鱼骨剁块。",
+      "豆芽入沸水焯熟捞入盆底。热油下姜蒜、豆瓣酱炒出红油，放鱼骨翻炒。",
+      "加水没过鱼骨烧开，转小火下鱼片煮至变色，连汤倒入豆芽盆。",
+      "洗净锅，入干辣椒、花椒、辣椒面小火炒香，趁热泼在鱼片上。",
+      "撒葱花即食。"
+    ],
+    tips: "鱼片下锅后勿翻搅，保持小火，鱼片才能完整滑嫩。"
+  },
+  {
+    id: "chuan-koushuiji",
+    name: "口水鸡",
+    image: "assets/img/chuan-koushuiji.webp",
+    desc: "皮黄肉白，红油淋身，麻辣醇厚，鸡肉冰爽滑嫩，唤醒食欲。",
+    time: "40 分钟",
+    difficulty: "中等",
+    serves: "3 人",
+    ingredients: [
+      { name: "三黄鸡", amount: 1, unit: "只（约1200克）" },
+      { name: "葱", amount: 3, unit: "根" },
+      { name: "姜", amount: 20, unit: "克" },
+      { name: "蒜", amount: 4, unit: "瓣" },
+      { name: "熟花生碎", amount: 20, unit: "克" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 3, unit: "汤匙" },
+      { name: "香醋", amount: 1, unit: "汤匙" },
+      { name: "辣椒油", amount: 3, unit: "汤匙" },
+      { name: "花椒油", amount: 1, unit: "汤匙" },
+      { name: "白糖", amount: 1, unit: "茶匙" },
+      { name: "香油", amount: 1, unit: "茶匙" },
+      { name: "盐", amount: 5, unit: "克" }
+    ],
+    steps: [
+      "整鸡入沸水中小火浸煮约 20 分钟至断生，捞出立刻入冰水浸凉，斩块摆盘。",
+      "蒜姜剁末，与生抽、香醋、辣椒油、花椒油、白糖、香油、盐调成红油味汁。",
+      "将味汁均匀淋在鸡块上，撒花生碎、白芝麻与葱花。"
+    ],
+    tips: "鸡肉煮后立即入冰水，可使鸡皮紧致爽滑、肉质弹嫩。"
   }
 ];

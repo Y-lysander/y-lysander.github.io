@@ -299,5 +299,66 @@ window.RECIPES.zhe = [
       "沥油装盘，蘸椒盐或甜酱食用。"
     ],
     tips: "油温适中炸透夹层，酥脆才听得见响声。"
+  },
+  {
+    id: "zhe-xihuchuncaitang",
+    name: "西湖莼菜汤",
+    image: "assets/img/zhe-xihuchuncaitang.webp",
+    desc: "莼菜滑嫩碧绿，鸡丝火腿提鲜，清汤见底，温润清雅。",
+    time: "20 分钟",
+    difficulty: "简单",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "鲜莼菜", amount: 200, unit: "克" },
+      { name: "熟鸡脯", amount: 80, unit: "克" },
+      { name: "金华火腿", amount: 40, unit: "克" },
+      { name: "葱", amount: 1, unit: "根" },
+      { name: "姜", amount: 5, unit: "克" }
+    ],
+    seasonings: [
+      { name: "高汤", amount: 600, unit: "毫升" },
+      { name: "盐", amount: 3, unit: "克" },
+      { name: "鸡精", amount: 1, unit: "茶匙" },
+      { name: "香油", amount: 1, unit: "茶匙" },
+      { name: "食用油", amount: 1, unit: "汤匙" }
+    ],
+    steps: [
+      "莼菜入沸水快速焯烫捞出；鸡脯、火腿切丝，姜切丝。",
+      "高汤烧开，下姜丝、鸡丝、火腿丝略煮提鲜。",
+      "放入莼菜再煮开，加盐、鸡精调味。",
+      "滴香油，撒葱花出锅。"
+    ],
+    tips: "莼菜易碎，焯水与煮制时间都要短，才能保持滑嫩翠绿。"
+  },
+  {
+    id: "zhe-heyefenzhengrou",
+    name: "荷叶粉蒸肉",
+    image: "assets/img/zhe-heyefenzhengrou.webp",
+    desc: "荷叶清香包裹米香肉糯，肥而不腻，粉绵肉韧层次分明。",
+    time: "60 分钟",
+    difficulty: "中等",
+    serves: "4 人",
+    ingredients: [
+      { name: "带皮五花肉", amount: 600, unit: "克" },
+      { name: "干荷叶", amount: 1, unit: "张" },
+      { name: "蒸肉米粉", amount: 120, unit: "克" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "葱", amount: 2, unit: "根" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 3, unit: "汤匙" },
+      { name: "老抽", amount: 1, unit: "汤匙" },
+      { name: "料酒", amount: 2, unit: "汤匙" },
+      { name: "白糖", amount: 1, unit: "汤匙" },
+      { name: "甜面酱", amount: 1, unit: "汤匙" },
+      { name: "盐", amount: 2, unit: "克" }
+    ],
+    steps: [
+      "五花肉切厚片，加生抽、老抽、料酒、白糖、甜面酱、盐抓匀腌 30 分钟。",
+      "腌好的肉片裹匀蒸肉米粉，荷叶浸软垫底铺好。",
+      "水开上锅大火蒸 40 分钟至肉酥米糯。",
+      "蒸好开荷叶，撒葱花即食。"
+    ],
+    tips: "米粉用粗粒口感更佳，蒸制中途勿频繁开盖。"
   }
 ];

@@ -304,5 +304,62 @@ window.RECIPES.min = [
       "捞出沥油撒糖，稍凉食用。"
     ],
     tips: "油温适中慢炸，芝麻香与糯米软糯相宜。"
+  },
+  {
+    id: "min-jitangcuhaibang",
+    name: "鸡汤汆海蚌",
+    image: "assets/img/min-jitangcuhaibang.webp",
+    desc: "汤清味厚，海蚌脆嫩，鸡肉吊出的醇汤一烫即成，鲜极。",
+    time: "40 分钟",
+    difficulty: "中等",
+    serves: "3 人",
+    ingredients: [
+      { name: "鲜活海蚌", amount: 6, unit: "只" },
+      { name: "老母鸡", amount: "半只", unit: "" },
+      { name: "姜", amount: 15, unit: "克" },
+      { name: "葱", amount: 2, unit: "根" },
+      { name: "料酒", amount: 1, unit: "汤匙" }
+    ],
+    seasonings: [
+      { name: "盐", amount: 4, unit: "克" },
+      { name: "高汤", amount: "适量", unit: "" },
+      { name: "白胡椒粉", amount: 1, unit: "茶匙" }
+    ],
+    steps: [
+      "老母鸡加姜葱、料酒炖成清鸡汤，过滤取清汤。",
+      "海蚌撬开取肉，洗净去沙，原汤澄清过滤。",
+      "清鸡汤重新烧滚，汆入蚌肉烫 30 秒至刚熟即捞出。",
+      "蚌肉置于碗中，冲入滚烫鸡汤，加盐、白胡椒粉调味。"
+    ],
+    tips: "此菜贵在「汆」——蚌肉烫至断生即出，久烫则老硬失脆。"
+  },
+  {
+    id: "min-babaoyuni",
+    name: "八宝芋泥",
+    image: "assets/img/min-babaoyuni.webp",
+    desc: "芋泥软糯绵密，果料缤纷，甜而不腻，闽地宴客的经典甜肴。",
+    time: "50 分钟",
+    difficulty: "中等",
+    serves: "4 人",
+    ingredients: [
+      { name: "槟榔芋头", amount: 700, unit: "克" },
+      { name: "猪油", amount: 50, unit: "克" },
+      { name: "白糖", amount: 120, unit: "克" },
+      { name: "红枣", amount: 8, unit: "颗" },
+      { name: "莲子", amount: 30, unit: "克" },
+      { name: "葡萄干", amount: 20, unit: "克" },
+      { name: "橘饼", amount: 20, unit: "克" }
+    ],
+    seasonings: [
+      { name: "食用油", amount: 30, unit: "毫升" },
+      { name: "糖桂花", amount: 1, unit: "茶匙" }
+    ],
+    steps: [
+      "芋头去皮切块，上锅蒸 25 分钟至软烂，趁热压成泥。",
+      "芋泥拌入猪油、白糖，反复压抹至细腻顺滑。",
+      "红枣去核、莲子泡软蒸熟，与橘饼丁、葡萄干一同备作八宝料。",
+      "碗内铺八宝料，填入芋泥压实，倒扣入盘，淋糖桂花即成。"
+    ],
+    tips: "芋泥要趁热捣压并加足猪油，口感才绵密不起粒。"
   }
 ];

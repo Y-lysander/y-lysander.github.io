@@ -318,5 +318,66 @@ window.RECIPES.lu = [
       "大火收汁亮油，摆盘即食。"
     ],
     tips: "虾头虾膏炒出红油，色泽与鲜味俱佳。"
+  },
+  {
+    id: "lu-congbaoyangrou",
+    name: "葱爆羊肉",
+    image: "assets/img/lu-congbaoyangrou.webp",
+    desc: "羊肉滑嫩无膻，葱香四溢，火候一秒争锋，咸鲜浓香下饭极佳。",
+    time: "20 分钟",
+    difficulty: "简单",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "羊里脊", amount: 300, unit: "克" },
+      { name: "大葱", amount: 3, unit: "根" },
+      { name: "姜", amount: 10, unit: "克" },
+      { name: "蒜", amount: 2, unit: "瓣" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "料酒", amount: 1, unit: "汤匙" },
+      { name: "蚝油", amount: 1, unit: "汤匙" },
+      { name: "白糖", amount: 1, unit: "茶匙" },
+      { name: "盐", amount: 2, unit: "克" },
+      { name: "食用油", amount: 2, unit: "汤匙" }
+    ],
+    steps: [
+      "羊肉逆纹切薄片，加料酒、盐稍腌；大葱斜切段，姜蒜切片。",
+      "热锅宽油，下羊肉大火快炒至变色断生，盛出。",
+      "留底油爆葱段出香，回羊肉，加生抽、蚝油、白糖大火翻炒。",
+      "沿锅边淋料酒，翻匀出锅。"
+    ],
+    tips: "全程大火快炒、一气呵成，羊肉才能嫩而多汁。"
+  },
+  {
+    id: "lu-muxurou",
+    name: "木须肉",
+    image: "assets/img/lu-muxurou.webp",
+    desc: "蛋香肉嫩，木耳爽脆，黄瓜清口，家常鲁菜咸鲜下饭。",
+    time: "20 分钟",
+    difficulty: "简单",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "猪里脊", amount: 200, unit: "克" },
+      { name: "鸡蛋", amount: 3, unit: "个" },
+      { name: "干木耳", amount: 15, unit: "克" },
+      { name: "黄瓜", amount: 1, unit: "根" },
+      { name: "葱", amount: 1, unit: "根" },
+      { name: "姜", amount: 5, unit: "克" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "盐", amount: 3, unit: "克" },
+      { name: "料酒", amount: 1, unit: "汤匙" },
+      { name: "淀粉", amount: 1, unit: "茶匙" },
+      { name: "食用油", amount: 2, unit: "汤匙" }
+    ],
+    steps: [
+      "里脊切薄片，加盐、料酒、淀粉抓匀；木耳泡发撕小朵，黄瓜切片，鸡蛋打散。",
+      "热油滑熟蛋液盛出；再下肉片滑炒至变色盛出。",
+      "爆香葱姜，下木耳、黄瓜翻炒，回肉片与鸡蛋。",
+      "加生抽、盐调味，快速翻匀出锅。"
+    ],
+    tips: "鸡蛋单炒可保持金黄松软，最后汇入避免过老。"
   }
 ];

@@ -311,5 +311,71 @@ window.RECIPES.xiang = [
       "出锅撒葱花即可。"
     ],
     tips: "淀粉锁汁，大火足汽蒸得排骨嫩滑豉香。"
+  },
+  {
+    id: "xiang-xiaochaohuangniurou",
+    name: "小炒黄牛肉",
+    image: "assets/img/xiang-xiaochaohuangniurou.webp",
+    desc: "湘味火气十足，牛肉嫩滑，小米辣鲜爽，咸香下饭。",
+    time: "25 分钟",
+    difficulty: "中等",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "黄牛肉", amount: 300, unit: "克" },
+      { name: "小米椒", amount: 5, unit: "个" },
+      { name: "青尖椒", amount: 3, unit: "个" },
+      { name: "芹菜", amount: 50, unit: "克" },
+      { name: "蒜", amount: 4, unit: "瓣" },
+      { name: "姜", amount: 10, unit: "克" },
+      { name: "香菜", amount: "适量", unit: "" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "蚝油", amount: 1, unit: "汤匙" },
+      { name: "料酒", amount: 1, unit: "汤匙" },
+      { name: "盐", amount: 2, unit: "克" },
+      { name: "淀粉", amount: 1, unit: "茶匙" },
+      { name: "食用油", amount: 2, unit: "汤匙" }
+    ],
+    steps: [
+      "牛肉逆纹切薄片，加料酒、生抽、淀粉抓匀腌 10 分钟。",
+      "小米椒、青尖椒斜切圈，蒜姜切末，芹菜切段。",
+      "热锅宽油滑牛肉至变色盛出。",
+      "爆香蒜姜与辣椒，下芹菜炒香，回牛肉，加生抽、蚝油、盐大火快炒，撒香菜出锅。"
+    ],
+    tips: "牛肉滑炒要快，锁住汁水；辣椒辣度可按口味增减。"
+  },
+  {
+    id: "xiang-kouweixia",
+    name: "口味虾",
+    image: "assets/img/xiang-kouweixia.webp",
+    desc: "小龙虾香辣过瘾，汤汁浓烈，越吮越上瘾的夜宵霸主。",
+    time: "45 分钟",
+    difficulty: "中等",
+    serves: "3-4 人",
+    ingredients: [
+      { name: "小龙虾", amount: 1000, unit: "克" },
+      { name: "干辣椒", amount: 20, unit: "克" },
+      { name: "蒜", amount: 6, unit: "瓣" },
+      { name: "姜", amount: 20, unit: "克" },
+      { name: "葱", amount: 3, unit: "根" },
+      { name: "紫苏", amount: "适量", unit: "" }
+    ],
+    seasonings: [
+      { name: "郫县豆瓣酱", amount: 2, unit: "汤匙" },
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "料酒", amount: 2, unit: "汤匙" },
+      { name: "白糖", amount: 1, unit: "汤匙" },
+      { name: "蚝油", amount: 1, unit: "汤匙" },
+      { name: "食用油", amount: 300, unit: "毫升" },
+      { name: "啤酒", amount: 300, unit: "毫升" }
+    ],
+    steps: [
+      "小龙虾刷洗干净，剪须爪；蒜姜切末，葱切段，干辣椒剪段。",
+      "热宽油爆香蒜姜葱与辣椒，下豆瓣酱炒出红油。",
+      "下小龙虾大火翻炒至变红，淋料酒、生抽、蚝油、白糖。",
+      "倒入啤酒焖煮 15 分钟，收浓汁，撒紫苏出锅。"
+    ],
+    tips: "啤酒焖煮可去腥增香，最后收汁至浓稠挂壳更入味。"
   }
 ];

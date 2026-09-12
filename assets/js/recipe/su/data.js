@@ -311,5 +311,66 @@ window.RECIPES.su = [
       "收至汁浓，淋香油晾凉入味。"
     ],
     tips: "烤麸吸足甜咸汁才够味，晾凉后更入味。"
+  },
+  {
+    id: "su-xiangyoushanhu",
+    name: "响油鳝糊",
+    image: "assets/img/su-xiangyoushanhu.webp",
+    desc: "蒜香喷涌，滚油滋滋作响，鳝丝软嫩，甜咸交错的江南风味。",
+    time: "35 分钟",
+    difficulty: "中等",
+    serves: "2-3 人",
+    ingredients: [
+      { name: "黄鳝丝", amount: 400, unit: "克" },
+      { name: "蒜", amount: 6, unit: "瓣" },
+      { name: "姜", amount: 10, unit: "克" },
+      { name: "葱", amount: 3, unit: "根" }
+    ],
+    seasonings: [
+      { name: "生抽", amount: 2, unit: "汤匙" },
+      { name: "老抽", amount: 1, unit: "汤匙" },
+      { name: "白糖", amount: 2, unit: "汤匙" },
+      { name: "料酒", amount: 1, unit: "汤匙" },
+      { name: "香醋", amount: 1, unit: "茶匙" },
+      { name: "淀粉", amount: "适量", unit: "" },
+      { name: "食用油", amount: 60, unit: "毫升" }
+    ],
+    steps: [
+      "黄鳝丝用料酒、姜片焯水捞出沥干；蒜剁成末，葱切花。",
+      "热油爆香蒜末，下鳝丝翻炒，烹入料酒。",
+      "加生抽、老抽、白糖，勾入淀粉水芡，翻匀装盘中堆起。",
+      "鳝糊上铺满蒜末与葱花，烧一勺滚油，趁热泼出滋啦响。"
+    ],
+    tips: "响油是精髓——蒜末葱花铺满，滚油趁热一泼，葱蒜香气才迸发。"
+  },
+  {
+    id: "su-wensidoufu",
+    name: "文思豆腐",
+    image: "assets/img/su-wensidoufu.webp",
+    desc: "细可穿针的豆腐丝沉浮清汤，刀工精细，清淡雅致，入口即化。",
+    time: "30 分钟",
+    difficulty: "中等",
+    serves: "3 人",
+    ingredients: [
+      { name: "嫩豆腐", amount: 300, unit: "克" },
+      { name: "熟鸡脯", amount: 50, unit: "克" },
+      { name: "金华火腿", amount: 30, unit: "克" },
+      { name: "青菜叶", amount: 50, unit: "克" },
+      { name: "冬笋", amount: 30, unit: "克" },
+      { name: "姜", amount: 5, unit: "克" }
+    ],
+    seasonings: [
+      { name: "高汤", amount: 800, unit: "毫升" },
+      { name: "盐", amount: 4, unit: "克" },
+      { name: "淀粉", amount: "适量", unit: "" },
+      { name: "食用油", amount: 1, unit: "汤匙" }
+    ],
+    steps: [
+      "嫩豆腐与鸡脯、火腿、青菜、冬笋分别切成极细的丝。",
+      "高汤烧开，下鸡丝、笋丝、火腿丝煮出味，加盐调底味。",
+      "转小火，轻轻放入豆腐丝与青菜丝，勾薄芡即可离火。",
+      "淋少许明油，趁热上桌。"
+    ],
+    tips: "豆腐丝入锅后不可翻搅，只轻轻晃动，才能保持刀工之美不散。"
   }
 ];
